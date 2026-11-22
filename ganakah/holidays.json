@@ -1,0 +1,1106 @@
+{
+ "version": 2,
+ "format": 2,
+ "published": "2026-11-18",
+ "lists": [
+  {
+   "id": "central-2026",
+   "scope": "central",
+   "year": 2026,
+   "title": "Holidays to be observed in Central Government Offices during the year 2026",
+   "order": "DoPT O.M. F.No.12/2/2023-JCA",
+   "orderDate": "2025-07-03",
+   "link": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "id": "central-2026-bakrid",
+   "scope": "central",
+   "year": 2026,
+   "title": "Change in the date of holiday on account of Id-ul-Zuha (Bakrid)",
+   "order": "DoPT O.M. F.No.12/3/2023-JCA",
+   "orderDate": "2026-05-22",
+   "link": "https://documents.doptcirculars.nic.in/D2/D02est/Change%20in%20the%20date%20of%20holiday%20of%20Id-ul-Zuhamg709.PDF"
+  },
+  {
+   "id": "central-2027",
+   "scope": "central",
+   "year": 2027,
+   "title": "Holidays to be observed in Central Government Offices during the year 2027",
+   "order": "DoPT O.M. F.No.12/2/2023-JCA",
+   "orderDate": "2026-07-16",
+   "link": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "id": "tn-2026",
+   "scope": "state",
+   "state": "TN",
+   "year": 2026,
+   "title": "Public Holidays under Negotiable Instruments Act, 1881 for the State Government Offices and all Commercial Banks including Co-operative Banks in Tamil Nadu for the year 2026",
+   "order": "G.O.(Ms.) No.708, Public (Miscellaneous) Department",
+   "orderDate": "2025-11-11",
+   "link": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "id": "tn-2026-poll",
+   "scope": "state",
+   "state": "TN",
+   "year": 2026,
+   "title": "Public holiday on account of poll, General Election to the Tamil Nadu Legislative Assembly 2026",
+   "order": "G.O.(Ms.) No.239, Public (Miscellaneous) Department",
+   "orderDate": "2026-03-26",
+   "link": "https://www.stationeryprinting.tn.gov.in/extra_ordinary_lists.php?id=MjAyNg%3D%3D"
+  },
+  {
+   "id": "rbi-tn-2026",
+   "scope": "bank",
+   "state": "TN",
+   "year": 2026,
+   "title": "RBI holidays, Chennai regional office: holidays under the Negotiable Instruments Act (besides Sundays and the 2nd and 4th Saturdays)",
+   "order": "Reserve Bank of India, Chennai regional office holiday list 2026",
+   "orderDate": null,
+   "link": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  }
+ ],
+ "items": [
+  {
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-01-03",
+   "name": "Hazarat Ali's Birthday",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-01-14",
+   "name": "Makar Sankranti",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-01-14",
+   "name": "Magha Bihu / Pongal",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-01-15",
+   "name": "Pongal",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-01-15",
+   "name": "Pongal",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-01-16",
+   "name": "Thiruvalluvar Day",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-01-16",
+   "name": "Thiruvalluvar Day",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-01-17",
+   "name": "Uzhavar Thirunal",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-01-17",
+   "name": "Uzhavar Thirunal",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-01-23",
+   "name": "Sri Panchami / Basant Panchami",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-01-26",
+   "name": "Republic Day",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "national": true,
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-01-26",
+   "name": "Republic Day",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-01-26",
+   "name": "Republic Day",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-02-01",
+   "name": "Guru Ravi Das's Birthday",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-02-01",
+   "name": "Thai Poosam",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-02-12",
+   "name": "Swami Dayananda Saraswati's Birthday",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-02-15",
+   "name": "Maha Shivratri",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-02-19",
+   "name": "Shivaji Jayanti",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-03-03",
+   "name": "Holika Dahan",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-03-03",
+   "name": "Dolyatra",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-03-19",
+   "name": "Chaitra Sukladi / Gudi Padava / Ugadi / Cheti Chand",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-03-19",
+   "name": "Telugu New Year's Day",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-03-19",
+   "name": "Telugu New Year's Day",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-03-20",
+   "name": "Jamat-ul-Vida",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-03-21",
+   "name": "Id-ul-Fitr",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-03-21",
+   "name": "Ramzan (Idu'l Fitr)",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-03-21",
+   "name": "Ramzan (Idu'l Fitr)",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-03-31",
+   "name": "Mahavir Jayanti",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-03-31",
+   "name": "Mahaveer Jayanthi",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-03-31",
+   "name": "Mahaveer Jayanthi",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-04-01",
+   "name": "Annual closing of bank accounts",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-04-03",
+   "name": "Good Friday",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-04-03",
+   "name": "Good Friday",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-04-03",
+   "name": "Good Friday",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-04-05",
+   "name": "Easter Sunday",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-04-14",
+   "name": "Vaisakhi / Vishu / Meshadi (Tamil New Year's Day)",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-04-14",
+   "name": "Tamil New Year's Day / Dr. B.R. Ambedkar's Birthday",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-04-14",
+   "name": "Tamil New Year's Day / Dr. B.R. Ambedkar's Birthday",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-04-15",
+   "name": "Vaisakhadi (Bengal) / Bahag Bihu (Assam)",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-04-23",
+   "name": "Tamil Nadu Assembly election (poll day)",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-04-23",
+   "name": "Tamil Nadu Assembly election (poll day)",
+   "list": "tn-2026-poll",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.stationeryprinting.tn.gov.in/extra_ordinary_lists.php?id=MjAyNg%3D%3D"
+  },
+  {
+   "date": "2026-05-01",
+   "name": "Buddha Purnima",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-05-01",
+   "name": "May Day",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-05-01",
+   "name": "May Day",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-05-09",
+   "name": "Guru Rabindranath Tagore's Birthday",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-05-28",
+   "name": "Id-ul-Zuha (Bakrid)",
+   "list": "central-2026-bakrid",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Change%20in%20the%20date%20of%20holiday%20of%20Id-ul-Zuhamg709.PDF"
+  },
+  {
+   "date": "2026-05-28",
+   "name": "Bakrid (Idul Azha)",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-05-28",
+   "name": "Bakrid (Idul Azha)",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-06-26",
+   "name": "Muharram",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-06-26",
+   "name": "Muharram",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-06-26",
+   "name": "Muharram",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-07-16",
+   "name": "Rath Yatra",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-08-15",
+   "name": "Independence Day",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "national": true,
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-08-15",
+   "name": "Parsi New Year's Day / Nauraz",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-08-15",
+   "name": "Independence Day",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-08-15",
+   "name": "Independence Day",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-08-26",
+   "name": "Milad-un-Nabi (Prophet Mohammad's Birthday)",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-08-26",
+   "name": "Onam",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-08-26",
+   "name": "Milad-un-Nabi (Prophet's Birthday)",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-08-26",
+   "name": "Milad-un-Nabi (Prophet's Birthday)",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-08-28",
+   "name": "Raksha Bandhan",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-09-04",
+   "name": "Krishna Jayanthi",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-09-04",
+   "name": "Krishna Jayanthi",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-09-14",
+   "name": "Ganesh Chaturthi / Vinayaka Chaturthi",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-09-14",
+   "name": "Vinayakar Chathurthi",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-09-14",
+   "name": "Vinayakar Chathurthi",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-10-02",
+   "name": "Mahatma Gandhi's Birthday",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "national": true,
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-10-02",
+   "name": "Gandhi Jayanthi",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-10-02",
+   "name": "Gandhi Jayanthi",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-10-18",
+   "name": "Dussehra (Saptami)",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-10-19",
+   "name": "Dussehra (Mahashtami)",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-10-19",
+   "name": "Ayutha Pooja",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-10-19",
+   "name": "Ayutha Pooja",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-10-20",
+   "name": "Dussehra",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-10-20",
+   "name": "Dussehra (Mahanavami)",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-10-20",
+   "name": "Vijaya Dasami",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-10-20",
+   "name": "Vijaya Dasami",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-10-26",
+   "name": "Maharishi Valmiki's Birthday",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Karaka Chaturthi (Karwa Chauth)",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-11-08",
+   "name": "Diwali (Deepavali)",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-11-08",
+   "name": "Naraka Chaturdasi",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-11-08",
+   "name": "Deepavali",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2026-11-09",
+   "name": "Govardhan Puja",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-11-11",
+   "name": "Bhai Duj",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-11-15",
+   "name": "Chhath Puja",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-11-24",
+   "name": "Guru Nanak's Birthday",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-11-24",
+   "name": "Guru Teg Bahadur's Martyrdom Day",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-12-23",
+   "name": "Hazarat Ali's Birthday",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-12-24",
+   "name": "Christmas Eve",
+   "list": "central-2026",
+   "kind": "restricted",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "list": "central-2026",
+   "kind": "compulsory",
+   "source": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf"
+  },
+  {
+   "date": "2026-12-25",
+   "name": "Christmas",
+   "list": "rbi-tn-2026",
+   "kind": "bank",
+   "state": "TN",
+   "source": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai"
+  },
+  {
+   "date": "2026-12-25",
+   "name": "Christmas",
+   "list": "tn-2026",
+   "kind": "state",
+   "state": "TN",
+   "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf"
+  },
+  {
+   "date": "2027-01-01",
+   "name": "New Year's Day",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-01-14",
+   "name": "Makar Sankranti / Magha Bihu",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-01-15",
+   "name": "Pongal / Guru Gobind Singh's Birthday",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-01-26",
+   "name": "Republic Day",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "national": true,
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-02-11",
+   "name": "Sri Panchami / Basant Panchami",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-02-19",
+   "name": "Shivaji Jayanti",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-02-20",
+   "name": "Guru Ravi Das's Birthday",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-03-02",
+   "name": "Swami Dayananda Saraswati's Birthday",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-03-05",
+   "name": "Jamat-ul-Vida",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-03-06",
+   "name": "Maha Shivratri",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-03-10",
+   "name": "Id-ul-Fitr",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-03-22",
+   "name": "Holika Dahan / Dolyatra",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-03-26",
+   "name": "Good Friday",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-03-28",
+   "name": "Easter Sunday",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-04-07",
+   "name": "Chaitra Sukladi / Gudi Padava / Ugadi / Cheti Chand",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-04-14",
+   "name": "Vaisakhi / Vishu / Meshadi (Tamil New Year's Day)",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-04-15",
+   "name": "Vaisakhadi (Bengal) / Bahag Bihu (Assam)",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-04-19",
+   "name": "Mahavir Jayanti",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-05-09",
+   "name": "Guru Rabindranath Tagore's Birthday",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-05-17",
+   "name": "Id-ul-Zuha (Bakrid)",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-05-20",
+   "name": "Buddha Purnima",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-06-16",
+   "name": "Muharram",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-07-05",
+   "name": "Rath Yatra",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-08-15",
+   "name": "Independence Day",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "national": true,
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-08-15",
+   "name": "Milad-un-Nabi (Prophet Mohammad's Birthday)",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-08-15",
+   "name": "Parsi New Year's Day / Nauraz",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-08-17",
+   "name": "Raksha Bandhan",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-09-04",
+   "name": "Ganesh Chaturthi / Vinayaka Chaturthi",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-09-12",
+   "name": "Onam",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-02",
+   "name": "Mahatma Gandhi's Birthday",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "national": true,
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-06",
+   "name": "Dussehra (Saptami)",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-07",
+   "name": "Dussehra (Mahashtami)",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-08",
+   "name": "Dussehra (Mahanavami)",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-09",
+   "name": "Dussehra (Vijaya Dashmi)",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-15",
+   "name": "Maharishi Valmiki's Birthday",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-18",
+   "name": "Karaka Chaturthi (Karwa Chauth)",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-28",
+   "name": "Naraka Chaturdasi",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-29",
+   "name": "Diwali (Deepavali)",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-30",
+   "name": "Govardhan Puja",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-10-31",
+   "name": "Bhai Duj",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-11-04",
+   "name": "Chhath Puja",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-11-14",
+   "name": "Guru Nanak's Birthday",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-11-24",
+   "name": "Guru Teg Bahadur's Martyrdom Day",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-12-12",
+   "name": "Hazarat Ali's Birthday",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-12-24",
+   "name": "Christmas Eve",
+   "list": "central-2027",
+   "kind": "restricted",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  },
+  {
+   "date": "2027-12-25",
+   "name": "Christmas Day",
+   "list": "central-2027",
+   "kind": "compulsory",
+   "source": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf"
+  }
+ ]
+}

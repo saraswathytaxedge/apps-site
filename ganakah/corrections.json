@@ -1,0 +1,92 @@
+{
+  "version": 4,
+  "published": "2026-11-18",
+  "items": [
+    {
+      "id": "tamil-2025-aippasi",
+      "target": "calendar",
+      "calendar": "tamil",
+      "sign": 6,
+      "start": "2025-10-18",
+      "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf",
+      "note": "G.O.(Ms.) No.708, Public (Misc.) Dept, dated 11-11-2025 prints 'Visuvavasu, Aippasi 25' for that day, so Aippasi began 18-10-2025 (the astronomical rule gives 17-10-2025)."
+    },
+    {
+      "id": "tamil-2026-thai",
+      "target": "calendar",
+      "calendar": "tamil",
+      "sign": 9,
+      "start": "2026-01-15",
+      "source": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf",
+      "note": "G.O.(Ms.) No.708: Pongal (Thai 1) on 15-01-2026 (the astronomical rule gives 14-01-2026: Makara sankranti before sunset)."
+    },
+    {
+      "id": "tamil-2026-aavani",
+      "target": "calendar",
+      "calendar": "tamil",
+      "sign": 4,
+      "start": "2026-08-18",
+      "source": "https://www.prohithar.com/",
+      "note": "Aavani 1 = 18-08-2026. Tamil month dates follow the Vakya sankramana date, as Tamil Nadu almanacs keep them (even Thirukanitha ones: Sri Thanigai Thirukanitha Panchangam 2026-27, page 2 note); the Drik sankranti is on the 17th in the morning."
+    },
+    {
+      "id": "tamil-2026-purattasi",
+      "target": "calendar",
+      "calendar": "tamil",
+      "sign": 5,
+      "start": "2026-09-18",
+      "source": "https://www.prohithar.com/",
+      "note": "Purattasi 1 = 18-09-2026. Tamil month dates follow the Vakya sankramana date, as Tamil Nadu almanacs keep them (even Thirukanitha ones: Sri Thanigai Thirukanitha Panchangam 2026-27, page 2 note); the Drik sankranti is on the 17th in the morning."
+    },
+    {
+      "id": "fest-ayudhaPuja-2026-tn",
+      "target": "festival",
+      "festival": "ayudhaPuja",
+      "year": 2026,
+      "date": "2026-10-20",
+      "region": "TN",
+      "source": "https://www.prohithar.com/",
+      "note": "Tradition choice: the Sri Thanigai Thirukanitha Panchangam 2026-27 keeps Saraswati / Ayudha Puja on 20-10-2026 (Navami at its time). The Tamil Nadu holiday G.O.(Ms.) No.708 has 19-10; the holiday list keeps that."
+    },
+    {
+      "id": "fest-vijayadashami-2026-tn",
+      "target": "festival",
+      "festival": "vijayadashami",
+      "year": 2026,
+      "date": "2026-10-21",
+      "region": "TN",
+      "source": "https://www.prohithar.com/",
+      "note": "Tradition choice: Thanigai Thirukanitha Panchangam 2026-27 keeps Vijaya Dasami on 21-10-2026; the holiday G.O. has 20-10 and the holiday list keeps that."
+    },
+    {
+      "id": "fest-holikaDahan-2027-tn",
+      "target": "festival",
+      "festival": "holikaDahan",
+      "year": 2027,
+      "date": "2027-03-21",
+      "region": "TN",
+      "source": "https://www.prohithar.com/",
+      "note": "Tradition choice: Purnima begins 6:22 PM on 21-03-2027 in Bhadra; the Dharmasindhu rule (and DoPT's Holika Dahan / Dolyatra) take the 22nd, Tamil almanacs keep Kama Dahanam on the night of the 21st (Thanigai Thirukanitha Panchangam 2026-27)."
+    },
+    {
+      "id": "fest-holi-2027-tn",
+      "target": "festival",
+      "festival": "holi",
+      "year": 2027,
+      "date": "2027-03-22",
+      "region": "TN",
+      "source": "https://www.prohithar.com/",
+      "note": "Follows Kama Dahanam on 21-03-2027: Holi 22-03 as the Thanigai Thirukanitha Panchangam 2026-27 lists it."
+    },
+    {
+      "id": "special-ekadashi-2027-01-18-tn",
+      "target": "special",
+      "kind": "ekadashi",
+      "from": "2027-01-18",
+      "to": "2027-01-19",
+      "region": "TN",
+      "source": "https://www.prohithar.com/",
+      "note": "Tradition choice: Ekadashi lasts only 70 minutes after sunrise on 19-01-2027; the Rashtriya Panchang's Smarta rule takes the 18th, the Thanigai Thirukanitha Panchangam keeps Bhishma Ekadashi on the 19th."
+    }
+  ]
+}

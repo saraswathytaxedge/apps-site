@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "published": "2026-11-17",
+  "items": [
+    {
+      "id": "gstr1-monthly",
+      "group": "GST",
+      "title": "GSTR-1",
+      "who": "Monthly GST filers",
+      "applies": ["gstMonthly"],
+      "rule": { "freq": "monthly", "start": "2026-01-11", "day": 11 },
+      "holidayShift": "previous",
+      "source": "https://tutorial.gst.gov.in/userguide/returns/GSTR_1.htm",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "gstr3b-monthly",
+      "group": "GST",
+      "title": "GSTR-3B",
+      "who": "Monthly GST filers",
+      "applies": ["gstMonthly"],
+      "rule": { "freq": "monthly", "start": "2026-01-20", "day": 20 },
+      "holidayShift": "previous",
+      "source": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter8/rule61_v1.00.html",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "gstr1-quarterly",
+      "group": "GST",
+      "title": "GSTR-1 (quarter)",
+      "who": "QRMP filers",
+      "applies": ["gstQrmp22", "gstQrmp24"],
+      "rule": { "freq": "quarterly", "start": "2026-01-13" },
+      "holidayShift": "previous",
+      "source": "https://tutorial.gst.gov.in/userguide/returns/GSTR_1.htm",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "gst-iff",
+      "group": "GST",
+      "title": "IFF (optional)",
+      "who": "QRMP filers, first two months of the quarter",
+      "applies": ["gstQrmp22", "gstQrmp24"],
+      "rule": [
+        { "freq": "quarterly", "start": "2026-02-13" },
+        { "freq": "quarterly", "start": "2026-03-13" }
+      ],
+      "holidayShift": "previous",
+      "source": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter8/rule59_v1.00.html",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "gst-pmt06",
+      "group": "GST",
+      "title": "GST PMT-06 tax payment",
+      "who": "QRMP filers, first two months of the quarter",
+      "applies": ["gstQrmp22", "gstQrmp24"],
+      "rule": [
+        { "freq": "quarterly", "start": "2026-02-25" },
+        { "freq": "quarterly", "start": "2026-03-25" }
+      ],
+      "holidayShift": "previous",
+      "source": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter8/rule61_v1.00.html",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "gstr3b-quarterly-22",
+      "group": "GST",
+      "title": "GSTR-3B (quarter)",
+      "who": "QRMP filers in the 22nd-day States and UTs",
+      "applies": ["gstQrmp22"],
+      "rule": { "freq": "quarterly", "start": "2026-01-22" },
+      "holidayShift": "previous",
+      "source": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter8/rule61_v1.00.html",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "gstr3b-quarterly-24",
+      "group": "GST",
+      "title": "GSTR-3B (quarter)",
+      "who": "QRMP filers in the 24th-day States and UTs",
+      "applies": ["gstQrmp24"],
+      "rule": { "freq": "quarterly", "start": "2026-01-24" },
+      "holidayShift": "previous",
+      "source": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter8/rule61_v1.00.html",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "gstr9",
+      "group": "GST",
+      "title": "GSTR-9 annual return",
+      "who": "Regular GST taxpayers",
+      "applies": ["gstMonthly", "gstQrmp22", "gstQrmp24"],
+      "rule": { "freq": "yearly", "start": "2026-12-31" },
+      "holidayShift": "previous",
+      "source": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter8/rule80_v1.00.html",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "advance-tax",
+      "group": "Income tax",
+      "title": "Advance tax instalment",
+      "who": "Advance tax payers",
+      "applies": ["advanceTax"],
+      "rule": { "freq": "quarterly", "start": "2026-03-15" },
+      "holidayShift": "previous",
+      "source": "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/tax-payments",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "itr-no-business",
+      "group": "Income tax",
+      "title": "Income tax return",
+      "who": "No business income, no audit",
+      "applies": ["itrNoBusiness"],
+      "rule": { "freq": "yearly", "start": "2026-07-31" },
+      "holidayShift": "previous",
+      "source": "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/%20income%20tax%20returns-faq",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "itr-business",
+      "group": "Income tax",
+      "title": "Income tax return",
+      "who": "Business or profession, no audit",
+      "applies": ["itrBusiness"],
+      "rule": { "freq": "yearly", "start": "2026-08-31" },
+      "holidayShift": "previous",
+      "source": "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/%20income%20tax%20returns-faq",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "tax-audit-report",
+      "group": "Income tax",
+      "title": "Tax audit report",
+      "who": "Accounts audited",
+      "applies": ["itrAudit"],
+      "rule": { "freq": "yearly", "start": "2026-09-30" },
+      "moved": { "2026-09-30": "2026-10-21" },
+      "holidayShift": "previous",
+      "source": "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-09/Circular-7-2026.pdf",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "itr-audit",
+      "group": "Income tax",
+      "title": "Income tax return",
+      "who": "Accounts audited",
+      "applies": ["itrAudit"],
+      "rule": { "freq": "yearly", "start": "2026-10-31" },
+      "moved": { "2026-10-31": "2026-11-21" },
+      "holidayShift": "previous",
+      "source": "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-09/Circular-7-2026.pdf",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "tds-payment",
+      "group": "TDS/TCS",
+      "title": "TDS payment",
+      "who": "TDS deductors (non-government)",
+      "applies": ["tds"],
+      "rule": [
+        { "freq": "monthly", "start": "2026-01-07", "day": 7 },
+        { "freq": "yearly", "start": "2026-04-30" }
+      ],
+      "skip": ["04-07"],
+      "holidayShift": "previous",
+      "source": "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/tax-payments-faq",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "tds-statement",
+      "group": "TDS/TCS",
+      "title": "TDS quarterly statement (Form 138 / 140 / 144)",
+      "who": "TDS deductors",
+      "applies": ["tds"],
+      "rule": [
+        { "freq": "yearly", "start": "2026-01-31" },
+        { "freq": "yearly", "start": "2026-05-31" },
+        { "freq": "yearly", "start": "2026-07-31" },
+        { "freq": "yearly", "start": "2026-10-31" }
+      ],
+      "holidayShift": "previous",
+      "source": "https://www.incometax.gov.in/iec/foportal/newformpage/forms/form140-um",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "llp-form11",
+      "group": "ROC",
+      "title": "LLP Form 11 annual return",
+      "who": "LLPs",
+      "applies": ["llp"],
+      "rule": { "freq": "yearly", "start": "2026-05-30" },
+      "holidayShift": "previous",
+      "source": "https://www.mca.gov.in/content/mca/global/en/mca/llp-e-filling/Form-11.html",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "llp-form8",
+      "group": "ROC",
+      "title": "LLP Form 8 statement of account and solvency",
+      "who": "LLPs",
+      "applies": ["llp"],
+      "rule": { "freq": "yearly", "start": "2026-10-30" },
+      "holidayShift": "previous",
+      "source": "https://www.mca.gov.in/content/mca/global/en/mca/llp-e-filling/Form-8.html",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "epf",
+      "group": "PF/ESI",
+      "title": "EPF contribution and ECR",
+      "who": "PF employers",
+      "applies": ["pfEsi"],
+      "rule": { "freq": "monthly", "start": "2026-01-15", "day": 15 },
+      "holidayShift": "previous",
+      "source": "https://www.epfindia.gov.in/site_docs/PDFs/MiscPDFs/Employer_Information_Booklet.pdf",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "esi",
+      "group": "PF/ESI",
+      "title": "ESI contribution",
+      "who": "ESI employers",
+      "applies": ["pfEsi"],
+      "rule": { "freq": "monthly", "start": "2026-01-15", "day": 15 },
+      "holidayShift": "previous",
+      "source": "https://esic.gov.in/contribution",
+      "checkedOn": "2026-11-17"
+    },
+    {
+      "id": "tn-pt-first-half",
+      "group": "Profession tax",
+      "title": "Profession tax: pay the tax deducted from August salary",
+      "who": "Employers in Greater Chennai Corporation",
+      "applies": ["tnPt"],
+      "rule": { "freq": "yearly", "start": "2026-09-30" },
+      "holidayShift": "previous",
+      "source": "https://chennaicorporation.gov.in/gcc/pdf/PT_Press_Release.pdf",
+      "checkedOn": "2026-11-17"
+    }
+  ]
+}
