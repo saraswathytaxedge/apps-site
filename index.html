@@ -7,39 +7,297 @@
 <meta name="description" content="Mobile apps by Saraswathy Tax Edge Advisory LLP, with their privacy policies.">
 <link rel="icon" href="favicon.png">
 <style>
-  :root { --bg: #F3F5FA; --card: #FFFFFF; --ink: #1C2756; --text: #1E2235; --muted: #5D6584; --line: #DCE1EE; --rule: #C7323E; }
+  :root { --bg: #F3F5FA; --card: #FFFFFF; --ink: #1C2756; --text: #1E2235; --muted: #5D6584; --line: #DCE1EE; --rule: #C7323E; --note: #FFF6E0; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #121628; --card: #1A1F36; --ink: #C9D2FF; --text: #E8EAF4; --muted: #99A0BD; --line: #2B3252; --rule: #FF6670; }
+    :root { --bg: #121628; --card: #1A1F36; --ink: #C9D2FF; --text: #E8EAF4; --muted: #99A0BD; --line: #2B3252; --rule: #FF6670; --note: #2E2A1C; }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Tamil", "Noto Sans Devanagari", "Noto Sans Telugu", "Noto Sans Malayalam", "Noto Sans Kannada", "Noto Sans Gujarati", "Noto Sans Oriya", "Noto Sans Bengali", "Nirmala UI", sans-serif; }
+  .top { max-width: 720px; margin: 0 auto; padding: 12px 16px 0; display: flex; justify-content: flex-end; }
+  .lang { position: relative; }
+  .lang > button { font: inherit; font-size: 15px; font-weight: 600; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+  .lang ul { position: absolute; right: 0; top: calc(100% + 6px); z-index: 10; list-style: none; margin: 0; padding: 6px; min-width: 170px; max-height: 70vh; overflow-y: auto; background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+  .lang ul[hidden] { display: none; }
+  .lang li button { display: block; width: 100%; text-align: left; font: inherit; font-size: 16px; color: var(--text); background: none; border: 0; border-radius: 10px; padding: 8px 12px; cursor: pointer; }
+  .lang li button:hover, .lang li button:focus { background: var(--bg); outline: none; }
+  .lang li button:focus-visible { outline: 2px solid var(--ink); }
+  .lang li button[aria-checked="true"] { color: var(--ink); font-weight: 700; }
+  .lang li button[aria-checked="true"]::after { content: " ✓"; }
+  main { max-width: 720px; margin: 0 auto; padding: 8px 16px 48px; }
+  article[hidden] { display: none; }
+  a { color: var(--ink); }
+  footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 24px; }
   h1 { color: var(--ink); font-size: 26px; margin: 8px 0 4px; }
   .lead { color: var(--muted); margin: 0 0 16px; }
   .app { display: flex; gap: 16px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
   .app img { width: 64px; height: 64px; border-radius: 15px; flex: none; }
   .app h2 { color: var(--ink); font-size: 20px; margin: 0; }
   .app p { margin: 2px 0 6px; color: var(--muted); }
-  a { color: var(--ink); font-weight: 600; }
-  footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 24px; }
+  .app a { font-weight: 600; }
 </style>
 </head>
 <body>
-<main>
-  <h1>Apps by Saraswathy Tax Edge</h1>
-  <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
-
-  <div class="app">
-    <img src="ganakah/icon.png" alt="Ganakah icon" width="64" height="64">
-    <div>
-      <h2>Ganakah</h2>
-      <p>Calculator, GST HSN Finder, income tax, mutual fund and loan tools, unit and currency converter. Works on the phone; sign-in is optional.</p>
-      <a href="ganakah/privacy.html">Privacy policy</a> ·
-      <a href="ganakah/privacy.html#ta" lang="ta">தனியுரிமைக் கொள்கை</a>
-    </div>
+<!-- One language at a time: ?lang=xx (en ta hi te ml kn mr gu or bn), else the last choice, else English. Without
+     JavaScript the English text shows. Each translation is an <article data-lang>; its ids get the language in front. -->
+<header class="top">
+  <div class="lang" id="lang" hidden>
+    <button type="button" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list" aria-label="Language">🌐 <span id="lang-name">English</span> ▾</button>
+    <ul id="lang-list" role="menu" aria-label="Language" hidden>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="true" data-lang="en" lang="en">English</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="ta" lang="ta">தமிழ்</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="hi" lang="hi">हिन्दी</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="te" lang="te">తెలుగు</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="ml" lang="ml">മലയാളം</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="kn" lang="kn">ಕನ್ನಡ</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="mr" lang="mr">मराठी</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="gu" lang="gu">ગુજરાતી</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="or" lang="or">ଓଡ଼ିଆ</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="bn" lang="bn">বাংলা</button></li>
+    </ul>
   </div>
+</header>
+<main>
+  <article lang="en" data-lang="en" data-title="Apps by Saraswathy Tax Edge">
+    <h1>Apps by Saraswathy Tax Edge</h1>
+    <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
 
-  <footer>Contact: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+    <div class="app">
+      <img src="ganakah/icon.png" alt="Ganakah icon" width="64" height="64">
+      <div>
+        <h2>Ganakah</h2>
+        <p>Calculator, GST HSN Finder, income tax, mutual fund and loan tools, unit and currency converter, calendar and panchangam, reminders, notes and more. Works on the phone; sign-in is optional.</p>
+        <p class="links"><a href="ganakah/privacy.html">Privacy policy</a> · <a href="ganakah/terms.html">Terms of use</a> · <a href="ganakah/delete-account.html">Delete account</a></p>
+      </div>
+    </div>
+
+    <footer>Contact: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+  </article>
+  <article lang="ta" data-lang="ta" data-title="Saraswathy Tax Edge வழங்கும் செயலிகள்" hidden>
+    <h1>Saraswathy Tax Edge வழங்கும் செயலிகள்</h1>
+    <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
+
+    <div class="app">
+      <img src="ganakah/icon.png" alt="Ganakah சின்னம்" width="64" height="64">
+      <div>
+        <h2>Ganakah</h2>
+        <p>கால்குலேட்டர், GST HSN தேடல், வருமான வரி, மியூச்சுவல் ஃபண்ட் மற்றும் கடன் கருவிகள், அலகு மற்றும் நாணய மாற்றி, நாட்காட்டி மற்றும் பஞ்சாங்கம், நினைவூட்டல்கள், குறிப்புகள் மற்றும் பல. உங்கள் போனிலேயே வேலை செய்யும்; உள்நுழைவு விருப்பத்திற்குரியது.</p>
+        <p class="links"><a href="ganakah/privacy.html">தனியுரிமைக் கொள்கை</a> · <a href="ganakah/terms.html">பயன்பாட்டு விதிமுறைகள்</a> · <a href="ganakah/delete-account.html">கணக்கை நீக்கு</a></p>
+      </div>
+    </div>
+
+    <footer>தொடர்புக்கு: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+  </article>
+  <article lang="hi" data-lang="hi" data-title="Saraswathy Tax Edge के ऐप" hidden>
+    <h1>Saraswathy Tax Edge के ऐप</h1>
+    <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
+
+    <div class="app">
+      <img src="ganakah/icon.png" alt="Ganakah आइकन" width="64" height="64">
+      <div>
+        <h2>Ganakah</h2>
+        <p>कैलकुलेटर, GST HSN खोज, आयकर, म्यूचुअल फ़ंड और लोन टूल, इकाई और मुद्रा कनवर्टर, कैलेंडर और पंचांग, रिमाइंडर, नोट्स और बहुत कुछ। सब कुछ फ़ोन पर ही काम करता है; साइन इन करना वैकल्पिक है।</p>
+        <p class="links"><a href="ganakah/privacy.html">गोपनीयता नीति</a> · <a href="ganakah/terms.html">उपयोग की शर्तें</a> · <a href="ganakah/delete-account.html">खाता हटाएँ</a></p>
+      </div>
+    </div>
+
+    <footer>संपर्क: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+  </article>
+  <article lang="te" data-lang="te" data-title="Saraswathy Tax Edge యాప్‌లు" hidden>
+    <h1>Saraswathy Tax Edge యాప్‌లు</h1>
+    <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
+
+    <div class="app">
+      <img src="ganakah/icon.png" alt="Ganakah చిహ్నం" width="64" height="64">
+      <div>
+        <h2>Ganakah</h2>
+        <p>కాలిక్యులేటర్, GST HSN శోధన, ఆదాయపు పన్ను, మ్యూచువల్ ఫండ్ మరియు రుణ సాధనాలు, యూనిట్ మరియు కరెన్సీ కన్వర్టర్, క్యాలెండర్ మరియు పంచాంగం, రిమైండర్లు, గమనికలు మరియు మరెన్నో. ఫోన్‌లోనే పనిచేస్తుంది; సైన్ ఇన్ ఐచ్ఛికం.</p>
+        <p class="links"><a href="ganakah/privacy.html">గోప్యతా విధానం</a> · <a href="ganakah/terms.html">వినియోగ నిబంధనలు</a> · <a href="ganakah/delete-account.html">ఖాతా తొలగించు</a></p>
+      </div>
+    </div>
+
+    <footer>సంప్రదించండి: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+  </article>
+  <article lang="ml" data-lang="ml" data-title="Saraswathy Tax Edge-ന്റെ ആപ്പുകൾ" hidden>
+    <h1>Saraswathy Tax Edge-ന്റെ ആപ്പുകൾ</h1>
+    <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
+
+    <div class="app">
+      <img src="ganakah/icon.png" alt="Ganakah ഐക്കൺ" width="64" height="64">
+      <div>
+        <h2>Ganakah</h2>
+        <p>കാൽക്കുലേറ്റർ, GST HSN തിരയൽ, ആദായനികുതി, മ്യൂച്വൽ ഫണ്ട്, വായ്പ എന്നിവയ്ക്കുള്ള ടൂളുകൾ, യൂണിറ്റ്, കറൻസി കൺവെർട്ടർ, കലണ്ടറും പഞ്ചാംഗവും, ഓർമ്മപ്പെടുത്തലുകൾ, കുറിപ്പുകൾ എന്നിവയും മറ്റു പലതും. ഫോണിൽത്തന്നെ പ്രവർത്തിക്കുന്നു; സൈൻ ഇൻ ചെയ്യുന്നത് നിർബന്ധമല്ല.</p>
+        <p class="links"><a href="ganakah/privacy.html">സ്വകാര്യതാ നയം</a> · <a href="ganakah/terms.html">ഉപയോഗ നിബന്ധനകൾ</a> · <a href="ganakah/delete-account.html">അക്കൗണ്ട് ഇല്ലാതാക്കുക</a></p>
+      </div>
+    </div>
+
+    <footer>ബന്ധപ്പെടുക: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+  </article>
+  <article lang="kn" data-lang="kn" data-title="Saraswathy Tax Edge ಅವರ ಆ್ಯಪ್‌ಗಳು" hidden>
+    <h1>Saraswathy Tax Edge ಅವರ ಆ್ಯಪ್‌ಗಳು</h1>
+    <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
+
+    <div class="app">
+      <img src="ganakah/icon.png" alt="Ganakah ಐಕಾನ್" width="64" height="64">
+      <div>
+        <h2>Ganakah</h2>
+        <p>ಕ್ಯಾಲ್ಕುಲೇಟರ್, GST HSN ಹುಡುಕಾಟ, ಆದಾಯ ತೆರಿಗೆ, ಮ್ಯೂಚುವಲ್ ಫಂಡ್ ಮತ್ತು ಸಾಲದ ಉಪಕರಣಗಳು, ಘಟಕ ಮತ್ತು ಕರೆನ್ಸಿ ಪರಿವರ್ತಕ, ಕ್ಯಾಲೆಂಡರ್ ಮತ್ತು ಪಂಚಾಂಗ, ಜ್ಞಾಪನೆಗಳು, ಟಿಪ್ಪಣಿಗಳು ಮತ್ತು ಇನ್ನಷ್ಟು. ಎಲ್ಲವೂ ಫೋನ್‌ನಲ್ಲೇ ಕೆಲಸ ಮಾಡುತ್ತದೆ; ಸೈನ್ ಇನ್ ಐಚ್ಛಿಕ.</p>
+        <p class="links"><a href="ganakah/privacy.html">ಗೌಪ್ಯತಾ ನೀತಿ</a> · <a href="ganakah/terms.html">ಬಳಕೆಯ ನಿಯಮಗಳು</a> · <a href="ganakah/delete-account.html">ಖಾತೆ ಅಳಿಸಿ</a></p>
+      </div>
+    </div>
+
+    <footer>ಸಂಪರ್ಕ: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+  </article>
+  <article lang="mr" data-lang="mr" data-title="Saraswathy Tax Edge ची अ‍ॅप्स" hidden>
+    <h1>Saraswathy Tax Edge ची अ‍ॅप्स</h1>
+    <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
+
+    <div class="app">
+      <img src="ganakah/icon.png" alt="Ganakah चिन्ह" width="64" height="64">
+      <div>
+        <h2>Ganakah</h2>
+        <p>कॅल्क्युलेटर, GST HSN शोध, आयकर, म्युच्युअल फंड आणि कर्जाची साधने, एकक आणि चलन परिवर्तक, दिनदर्शिका आणि पंचांग, स्मरणपत्रे, टिपा आणि बरेच काही. सर्व काही फोनवरच चालते; साइन इन करणे ऐच्छिक आहे.</p>
+        <p class="links"><a href="ganakah/privacy.html">गोपनीयता धोरण</a> · <a href="ganakah/terms.html">वापराच्या अटी</a> · <a href="ganakah/delete-account.html">खाते हटवा</a></p>
+      </div>
+    </div>
+
+    <footer>संपर्क: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+  </article>
+  <article lang="gu" data-lang="gu" data-title="Saraswathy Tax Edge ની એપ્સ" hidden>
+    <h1>Saraswathy Tax Edge ની એપ્સ</h1>
+    <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
+
+    <div class="app">
+      <img src="ganakah/icon.png" alt="Ganakah આઇકન" width="64" height="64">
+      <div>
+        <h2>Ganakah</h2>
+        <p>કેલ્ક્યુલેટર, GST HSN શોધ, આવકવેરો, મ્યુચ્યુઅલ ફંડ અને લોનનાં સાધનો, એકમ અને ચલણ રૂપાંતરક, કૅલેન્ડર અને પંચાંગ, રિમાઇન્ડર, નોંધો અને ઘણું વધુ. ફોન પર જ કામ કરે છે; સાઇન ઇન કરવું વૈકલ્પિક છે.</p>
+        <p class="links"><a href="ganakah/privacy.html">ગોપનીયતા નીતિ</a> · <a href="ganakah/terms.html">ઉપયોગની શરતો</a> · <a href="ganakah/delete-account.html">એકાઉન્ટ કાઢી નાખો</a></p>
+      </div>
+    </div>
+
+    <footer>સંપર્ક: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+  </article>
+  <article lang="or" data-lang="or" data-title="Saraswathy Tax Edge ର ଆପ୍‌ଗୁଡ଼ିକ" hidden>
+    <h1>Saraswathy Tax Edge ର ଆପ୍‌ଗୁଡ଼ିକ</h1>
+    <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
+
+    <div class="app">
+      <img src="ganakah/icon.png" alt="Ganakah ଆଇକନ୍" width="64" height="64">
+      <div>
+        <h2>Ganakah</h2>
+        <p>କାଲକୁଲେଟର, GST HSN ସନ୍ଧାନ ସାଧନ, ଆୟକର, ମ୍ୟୁଚୁଆଲ୍ ଫଣ୍ଡ ଓ ଋଣ ସାଧନ, ଏକକ ଓ ମୁଦ୍ରା ପରିବର୍ତ୍ତକ, କ୍ୟାଲେଣ୍ଡର ଓ ପଞ୍ଜିକା, ସ୍ମାରକ, ଟିପ୍ପଣୀ ଏବଂ ଆହୁରି ଅନେକ କିଛି। ଏହା ଫୋନ୍‌ରେ ହିଁ କାମ କରେ; ସାଇନ୍ ଇନ୍ ଇଚ୍ଛାଧୀନ।</p>
+        <p class="links"><a href="ganakah/privacy.html">ଗୋପନୀୟତା ନୀତି</a> · <a href="ganakah/terms.html">ବ୍ୟବହାର ସର୍ତ୍ତାବଳୀ</a> · <a href="ganakah/delete-account.html">ଆକାଉଣ୍ଟ ବିଲୋପ କରନ୍ତୁ</a></p>
+      </div>
+    </div>
+
+    <footer>ଯୋଗାଯୋଗ: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+  </article>
+  <article lang="bn" data-lang="bn" data-title="Saraswathy Tax Edge-এর অ্যাপ" hidden>
+    <h1>Saraswathy Tax Edge-এর অ্যাপ</h1>
+    <p class="lead">Saraswathy Tax Edge Advisory LLP</p>
+
+    <div class="app">
+      <img src="ganakah/icon.png" alt="Ganakah আইকন" width="64" height="64">
+      <div>
+        <h2>Ganakah</h2>
+        <p>ক্যালকুলেটর, GST HSN খোঁজ, আয়কর, মিউচুয়াল ফান্ড ও ঋণের টুল, একক ও মুদ্রা রূপান্তরক, ক্যালেন্ডার ও পঞ্জিকা, রিমাইন্ডার, নোট এবং আরও অনেক কিছু। সব কাজ ফোনেই হয়; সাইন ইন করা ঐচ্ছিক।</p>
+        <p class="links"><a href="ganakah/privacy.html">গোপনীয়তা নীতি</a> · <a href="ganakah/terms.html">ব্যবহারের শর্তাবলি</a> · <a href="ganakah/delete-account.html">অ্যাকাউন্ট মুছুন</a></p>
+      </div>
+    </div>
+
+    <footer>যোগাযোগ: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></footer>
+  </article>
 </main>
+<script>
+(function () {
+  var NAMES = { en: 'English', ta: 'தமிழ்', hi: 'हिन्दी', te: 'తెలుగు', ml: 'മലയാളം', kn: 'ಕನ್ನಡ', mr: 'मराठी', gu: 'ગુજરાતી', or: 'ଓଡ଼ିଆ', bn: 'বাংলা' };
+  var KEY = 'ganakah.site.lang';
+  var arts = [].slice.call(document.querySelectorAll('article[data-lang]'));
+  var menu = document.getElementById('lang'), btn = document.getElementById('lang-btn'), list = document.getElementById('lang-list');
+  var items = [].slice.call(list.querySelectorAll('button[data-lang]'));
+  var cur = 'en';
+  function ok(l) { return Object.prototype.hasOwnProperty.call(NAMES, l); }
+  function first() {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+    if (q && ok(q)) return q;
+    var h = location.hash.slice(1);
+    if (h && ok(h)) return h; // old links such as privacy.html#ta
+    try { var s = localStorage.getItem(KEY); if (s && ok(s)) return s; } catch (e) {}
+    return 'en';
+  }
+  // Links to the other pages carry the language; #parts of a translation point at its own ids (ta-account…).
+  function relink(l) {
+    [].forEach.call(document.querySelectorAll('article a[href]'), function (a) {
+      var h = a.getAttribute('data-href');
+      if (h === null) { h = a.getAttribute('href'); a.setAttribute('data-href', h); }
+      if (/^(https?:|mailto:|#)/.test(h)) return;
+      var i = h.indexOf('#'), base = i < 0 ? h : h.slice(0, i), hash = i < 0 ? '' : h.slice(i);
+      a.setAttribute('href', base + (base.indexOf('?') < 0 ? '?' : '&') + 'lang=' + l + hash);
+    });
+  }
+  function target(id) { return (cur !== 'en' && document.getElementById(cur + '-' + id)) || document.getElementById(id); }
+  function jump() {
+    var id = location.hash.slice(1);
+    if (!id || ok(id)) return;
+    var el = target(decodeURIComponent(id));
+    if (el) el.scrollIntoView();
+  }
+  function show(l, save) {
+    cur = l;
+    arts.forEach(function (a) { a.hidden = a.getAttribute('data-lang') !== l; });
+    document.documentElement.lang = l;
+    var a = document.querySelector('article[data-lang="' + l + '"]');
+    if (a && a.getAttribute('data-title')) document.title = a.getAttribute('data-title');
+    document.getElementById('lang-name').textContent = NAMES[l];
+    items.forEach(function (b) { b.setAttribute('aria-checked', b.getAttribute('data-lang') === l ? 'true' : 'false'); });
+    relink(l);
+    if (save) {
+      try { localStorage.setItem(KEY, l); } catch (e) {}
+      try {
+        var u = new URL(location.href);
+        u.searchParams.set('lang', l);
+        if (ok(u.hash.slice(1))) u.hash = '';
+        history.replaceState(null, '', u.toString());
+      } catch (e) {}
+    }
+  }
+  function open(on) {
+    list.hidden = !on;
+    btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+    if (on) { var c = list.querySelector('[aria-checked="true"]') || items[0]; c.focus(); }
+  }
+  btn.addEventListener('click', function () { open(list.hidden); });
+  items.forEach(function (b, i) {
+    b.addEventListener('click', function () { show(b.getAttribute('data-lang'), true); open(false); btn.focus(); });
+    b.addEventListener('keydown', function (e) {
+      var k = e.key, n = null;
+      if (k === 'ArrowDown') n = items[(i + 1) % items.length];
+      else if (k === 'ArrowUp') n = items[(i - 1 + items.length) % items.length];
+      else if (k === 'Home') n = items[0];
+      else if (k === 'End') n = items[items.length - 1];
+      else if (k === 'Escape') { e.preventDefault(); open(false); btn.focus(); return; }
+      else if (k === 'Tab') { open(false); return; }
+      if (n) { e.preventDefault(); n.focus(); }
+    });
+  });
+  btn.addEventListener('keydown', function (e) { if (e.key === 'ArrowDown') { e.preventDefault(); open(true); } });
+  document.addEventListener('click', function (e) { if (!menu.contains(e.target)) open(false); });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('article a[href^="#"]');
+    if (!a) return;
+    var el = target(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    try { history.replaceState(null, '', a.getAttribute('href')); } catch (x) {}
+    el.scrollIntoView();
+  });
+  window.addEventListener('hashchange', jump);
+  menu.hidden = false;
+  show(first(), false);
+  jump();
+})();
+</script>
 </body>
 </html>
