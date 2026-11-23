@@ -36,10 +36,10 @@
 
   <section id="en" lang="en">
     <h1>Ganakah – Privacy policy</h1>
-    <p class="meta">Saraswathy Tax Edge Advisory LLP · Effective date: 22 November 2026 (version 2.0)</p>
+    <p class="meta">Saraswathy Tax Edge Advisory LLP · Effective date: 23 November 2026 (version 2.0.1)</p>
 
     <h2>In short</h2>
-    <p>Ganakah is a calculator, converter, calendar and personal assistant app (reminders, alarms, notes, tasks, accounts, scanner, vault). It has no account and no sign-in. It does not collect, store on our side, sell or share any personal data. There are no ads, no analytics and no tracking.</p>
+    <p>Ganakah is a calculator, converter, calendar and personal assistant app (reminders, alarms, notes, tasks, accounts, scanner, vault). Signing in is optional: every tool works without it. If you sign in, our sign-in server keeps only your email address, an optional name and the times you signed in. Everything else you keep in the app stays on your phone. If you turn on the automatic Google Drive backup, it goes to a hidden folder in your own Google Drive, locked with your own password. We do not sell or share any personal data. There are no ads, no analytics and no tracking.</p>
 
     <h2>What stays on your phone</h2>
     <p>Everything you type is worked out on your phone. The app saves a few things only on your phone so it can remember them for you:</p>
@@ -50,17 +50,43 @@
       <li>the last exchange rates downloaded, so the converter works offline,</li>
       <li>your reminders, bills, alarms, notes, tasks, appointments, Digital Accounts, scans, vault records and calendar settings (in the app's own encrypted database and files).</li>
     </ul>
-    <p>We never receive this data. You can clear the calculator history and favourites in Settings (☰ on the home screen). Uninstalling the app, or clearing its storage in the phone's settings, removes all of it.</p>
+    <p>We never receive this data, also when you are signed in. You can clear the calculator history and favourites in Settings (☰ on the home screen). Uninstalling the app, or clearing its storage in the phone's settings, removes all of it.</p>
 
     <h2>Network use</h2>
-    <p>Ganakah goes online for three things only:</p>
+    <p>Ganakah goes online for these things only:</p>
     <ul>
       <li><strong>Currency exchange rates</strong> for the currency converter. It asks <strong>open.er-api.com</strong> for the latest rates, and <strong>api.frankfurter.dev</strong> as a backup if the first does not answer.</li>
       <li><strong>Due-date, holiday and calendar updates.</strong> The app downloads due-date, holiday and calendar updates from our website (<strong>apps.saraswathytaxedge.com/ganakah/</strong>), also in the background, about every 6 hours at most. Nothing about you is sent: not which due dates you ticked, not your reminders or accounts.</li>
+      <li><strong>Sign-in, only if you choose to sign in.</strong> Your email address (and a name, if you add one) goes to our sign-in server; see <a href="#account">Optional sign-in</a>.</li>
+      <li><strong>Google Drive backup, only if you turn it on.</strong> Your locked backup file goes to your own Google Drive; see <a href="#drive">Automatic Google Drive backup</a>.</li>
       <li><strong>Text reading files for the scanner (Android).</strong> The first time you use Text in the scanner with a language, and only after you agree on that screen, the app downloads that language's reading file (1–5 MB) from the Tesseract project on GitHub (<strong>raw.githubusercontent.com/tesseract-ocr/</strong>). The text itself is read on your phone: your scanned pages are never sent anywhere.</li>
     </ul>
     <p>These requests only fetch a file; they contain nothing you typed and no personal data. Like any website, these services can see your phone's IP address when the request is made.</p>
     <p>The HSN/SAC list, GST rates, income tax rules and other rates are stored inside the app and do not need the internet. The calendar, panchangam, festivals and sunrise times are worked out on your phone.</p>
+
+    <h2 id="account">Optional sign-in</h2>
+    <p>You can sign in with your email address (☰ → Sign in to Ganakah). Signing in is optional and only for people aged 18 or older; anyone can use every tool without it.</p>
+    <ul>
+      <li><strong>What we keep:</strong> your email address, the name you choose to add (optional), when the account was made and when you last signed in. Nothing else: not your notes, tasks, reminders, Digital Accounts, vault, calendar, history or anything else in the app. These never leave your phone because you signed in.</li>
+      <li><strong>Why:</strong> only to sign you in and to contact you about your account.</li>
+      <li><strong>How:</strong> the app sends your email address to our sign-in server (<strong>api.saraswathytaxedge.com</strong>, run on Cloudflare). The server sends you a 6-digit code by email through MSG91 (our email service), from no-reply@mail.saraswathytaxedge.com. The code is valid for 10 minutes; we keep only a scrambled form of it (a hash), never the code itself, and delete it when it is used or expires. After you enter the code, the app keeps a sign-in key on your phone, in the phone's secure storage; it is valid for 90 days and renewed while you use the app.</li>
+      <li><strong>Who processes it for us:</strong> Cloudflare, Inc. runs our sign-in server and its database; MSG91 (Walkover Web Solutions Pvt. Ltd.) sends the code email. They act only on our instructions, as our processors, and may not use your email address for anything else. Your account data may be stored and processed on servers outside India.</li>
+      <li><strong>How long:</strong> until you delete your account. When you delete it, it is deleted from our server at once (our server's automatic backup copies roll over within 30 days). The email service (MSG91) keeps a delivery log of the code emails under its own retention policy; when you delete your account, we ask MSG91 to remove your email address from it.</li>
+      <li><strong>Your rights</strong> (Digital Personal Data Protection Act, 2023): you can see your email and name in the Profile screen, correct your name there, and delete your account at any time (see <a href="#delete-account">Delete your account</a>). You may also withdraw your consent by deleting the account; the app keeps working without it.</li>
+    </ul>
+
+    <h2 id="delete-account">Delete your account</h2>
+    <p>In the app: ☰ → your name at the top → Profile → Delete account, then type DELETE. This deletes your email address, name and sign-in times from our server at once, and signs you out. The data in the app on your phone stays, unless you also tick "Also erase data on this phone".</p>
+    <p>Without the app: email <a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a> from the email address of the account with the subject "Delete my Ganakah account". We delete it within 30 days and confirm by email. The steps are also on the <a href="delete-account.html">Delete your Ganakah account</a> page.</p>
+
+    <h2 id="drive">Automatic Google Drive backup</h2>
+    <p>This is off until you turn it on (☰ → Backup → Automatic backup).</p>
+    <ul>
+      <li><strong>Where it goes:</strong> into the hidden app folder of <em>your own</em> Google Drive. Ganakah asks Google only for the <code>drive.appdata</code> permission: it can see only the files it made in that folder. It cannot see, read or change any other file in your Drive. The backup never goes to our server.</li>
+      <li><strong>Locked with your password:</strong> each backup is made and encrypted on your phone (AES-256) with a password you choose, before it is uploaded. Nobody can open it without that password: not Google, not us. The password itself is never stored; the phone keeps only a key made from it, in its secure storage. The vault is never part of the automatic backup.</li>
+      <li><strong>Google sign-in:</strong> you sign in with your Google account on your phone to give this permission. Your Google account's email address is used only on your phone, to show which account the backup goes to; it is not sent to us.</li>
+      <li><strong>How long:</strong> the newest 2 backups are kept and older ones are removed. Turning the backup off signs Ganakah out of Google; backups already in your Drive stay until you delete them (Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data).</li>
+    </ul>
 
     <h2>Voice typing</h2>
     <p>On Android, the 🎤 button (in notes, tasks and reminders) opens your phone's own voice typing screen, usually Google's speech service. Ganakah itself records nothing and does not use the microphone permission for this: the phone's speech service turns your voice into words and gives the words back to Ganakah. That service may send your voice to Google to be recognised (or work offline if your phone has the language), under Google's own privacy policy. The app says this once before the first use. On iPhone, use the keyboard's own dictation.</p>
@@ -111,11 +137,11 @@
       <li><strong>Vault:</strong> opens only after your phone's own fingerprint, face or PIN. Photos and PDFs you add are encrypted one by one with a separate key and never go to the phone's gallery. On Android, screenshots and screen recording are blocked on vault screens.</li>
       <li><strong>Sharing a record:</strong> the app asks you to unlock again, makes a decrypted copy only for that share, and deletes it afterwards.</li>
       <li><strong>Phone backups:</strong> Android's automatic cloud backup is turned off for Ganakah, because the encrypted data cannot be opened on another phone without its key.</li>
-      <li><strong>Ganakah backup (More → Backup):</strong> you can make one backup file, locked with a password you choose, and share it or save it where you like (for example your own Google Drive or e-mail). It is made on your phone; nobody can open it without your password, including us. The vault is included only if you switch it on after unlocking. Restoring reads a backup file you pick. Ganakah never uploads a backup anywhere by itself.</li>
+      <li><strong>Ganakah backup (More → Backup):</strong> you can make one backup file, locked with a password you choose, and share it or save it where you like (for example your own Google Drive or e-mail). It is made on your phone; nobody can open it without your password, including us. The vault is included only if you switch it on after unlocking. Restoring reads a backup file you pick. Apart from the <a href="#drive">automatic Google Drive backup</a>, which you turn on yourself, Ganakah never uploads a backup anywhere by itself.</li>
     </ul>
 
     <h2>Children</h2>
-    <p>Ganakah is meant for adults. It collects no data from anyone, including children.</p>
+    <p>Ganakah is meant for adults. Signing in is only for people aged 18 or older; anyone younger can use every tool without signing in. We do not knowingly keep any data of children.</p>
 
     <h2>Not an official app</h2>
     <p>Ganakah is not affiliated with, or endorsed by, the Income Tax Department, CBIC, GSTN or any government body. Results are a guide only and are not tax, legal or investment advice. Please check important figures with the official source.</p>
@@ -123,16 +149,19 @@
     <h2>Changes to this policy</h2>
     <p>If this policy changes, the new version will be posted on this page with a new effective date, and the app's store listing will be updated. If a change ever affects what data the app uses, it will also be mentioned in the app's release notes before the update is released.</p>
 
+    <h2 id="grievance">Questions and complaints (grievance contact)</h2>
+    <p>For any question, request or complaint about your personal data, write to our grievance contact at <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a>. We reply within 30 days. If you are not satisfied with our reply, you may complain to the Data Protection Board of India.</p>
+
     <h2>Contact</h2>
     <p>Saraswathy Tax Edge Advisory LLP<br>Email: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a><br>Website: <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></p>
   </section>
 
   <section id="ta" lang="ta">
     <h1>Ganakah – தனியுரிமைக் கொள்கை</h1>
-    <p class="meta">Saraswathy Tax Edge Advisory LLP · நடைமுறைக்கு வரும் நாள்: 22 நவம்பர் 2026 (பதிப்பு 2.0)</p>
+    <p class="meta">Saraswathy Tax Edge Advisory LLP · நடைமுறைக்கு வரும் நாள்: 23 நவம்பர் 2026 (பதிப்பு 2.0.1)</p>
 
     <h2>சுருக்கமாக</h2>
-    <p>Ganakah ஒரு கால்குலேட்டர், மாற்றி (converter), நாட்காட்டி மற்றும் தனிப்பட்ட உதவியாளர் செயலி (நினைவூட்டல்கள், அலாரங்கள், குறிப்புகள், பணிகள், கணக்குகள், ஸ்கேனர், பெட்டகம்). இதில் கணக்கு (account) இல்லை, உள்நுழைவும் (sign-in) இல்லை. எந்தத் தனிப்பட்ட தகவலையும் நாங்கள் சேகரிப்பதோ, எங்களிடம் சேமிப்பதோ, விற்பதோ, பகிர்வதோ இல்லை. விளம்பரங்கள் இல்லை, பகுப்பாய்வு (analytics) இல்லை, கண்காணிப்பு (tracking) இல்லை.</p>
+    <p>Ganakah ஒரு கால்குலேட்டர், மாற்றி (converter), நாட்காட்டி மற்றும் தனிப்பட்ட உதவியாளர் செயலி (நினைவூட்டல்கள், அலாரங்கள், குறிப்புகள், பணிகள், கணக்குகள், ஸ்கேனர், பெட்டகம்). உள்நுழைவு (sign-in) விருப்பத்திற்குரியது: அது இல்லாமலும் எல்லாக் கருவிகளும் வேலை செய்யும். நீங்கள் உள்நுழைந்தால், எங்கள் உள்நுழைவு சர்வர் உங்கள் மின்னஞ்சல் முகவரி, நீங்கள் விரும்பிச் சேர்க்கும் பெயர், உள்நுழைந்த நேரங்கள் ஆகியவற்றை மட்டுமே வைத்திருக்கும். செயலியில் நீங்கள் வைத்திருக்கும் மற்ற அனைத்தும் உங்கள் போனிலேயே இருக்கும். தானியங்கி Google Drive காப்புப் பிரதியை நீங்கள் இயக்கினால், அது உங்கள் சொந்தக் கடவுச்சொல்லால் பூட்டப்பட்டு, உங்கள் சொந்த Google Drive-இன் மறைந்த கோப்புறைக்குச் செல்லும். எந்தத் தனிப்பட்ட தகவலையும் நாங்கள் விற்பதோ பகிர்வதோ இல்லை. விளம்பரங்கள் இல்லை, பகுப்பாய்வு (analytics) இல்லை, கண்காணிப்பு (tracking) இல்லை.</p>
 
     <h2>உங்கள் போனிலேயே இருப்பவை</h2>
     <p>நீங்கள் தட்டச்சு செய்யும் அனைத்தும் உங்கள் போனிலேயே கணக்கிடப்படுகின்றன. உங்களுக்காக நினைவில் வைத்துக்கொள்ள, சில விவரங்களை மட்டும் செயலி உங்கள் போனிலேயே சேமிக்கிறது:</p>
@@ -143,17 +172,43 @@
       <li>கடைசியாகப் பதிவிறக்கிய நாணய மாற்று விகிதங்கள் (இணையம் இல்லாதபோதும் மாற்றி வேலை செய்ய),</li>
       <li>உங்கள் நினைவூட்டல்கள், பில்கள், அலாரங்கள், குறிப்புகள், பணிகள், சந்திப்புகள், டிஜிட்டல் கணக்குகள், ஸ்கேன்கள், பெட்டகப் பதிவுகள், நாட்காட்டி அமைப்புகள் (செயலியின் சொந்த மறையாக்கப்பட்ட தரவுத்தளத்திலும் கோப்புகளிலும்).</li>
     </ul>
-    <p>இந்தத் தகவல் எதுவும் எங்களுக்கு வருவதில்லை. கால்குலேட்டர் வரலாற்றையும் விருப்பங்களையும் Settings-இல் (முகப்புத் திரையில் ☰) அழிக்கலாம். செயலியை நீக்கினால் (uninstall) அல்லது போன் அமைப்புகளில் அதன் சேமிப்பை அழித்தால், அனைத்தும் நீங்கிவிடும்.</p>
+    <p>நீங்கள் உள்நுழைந்திருந்தாலும் இந்தத் தகவல் எதுவும் எங்களுக்கு வருவதில்லை. கால்குலேட்டர் வரலாற்றையும் விருப்பங்களையும் Settings-இல் (முகப்புத் திரையில் ☰) அழிக்கலாம். செயலியை நீக்கினால் (uninstall) அல்லது போன் அமைப்புகளில் அதன் சேமிப்பை அழித்தால், அனைத்தும் நீங்கிவிடும்.</p>
 
     <h2>இணையப் பயன்பாடு</h2>
-    <p>Ganakah மூன்று காரணங்களுக்கு மட்டுமே இணையத்தைப் பயன்படுத்துகிறது:</p>
+    <p>Ganakah இவற்றுக்கு மட்டுமே இணையத்தைப் பயன்படுத்துகிறது:</p>
     <ul>
       <li><strong>நாணய மாற்று விகிதங்கள்</strong>: நாணய மாற்றிக்காக <strong>open.er-api.com</strong> தளத்திடம் சமீபத்திய விகிதங்களைக் கேட்கிறது; அது பதில் தராவிட்டால் மாற்றாக <strong>api.frankfurter.dev</strong> தளத்திடம் கேட்கிறது.</li>
       <li><strong>கடைசி தேதி, விடுமுறை, நாட்காட்டிப் புதுப்பிப்புகள்</strong>: செயலி எங்கள் இணையதளத்திலிருந்து (<strong>apps.saraswathytaxedge.com/ganakah/</strong>) கடைசி தேதி, விடுமுறை, நாட்காட்டிப் புதுப்பிப்புகளைப் பதிவிறக்குகிறது; பின்னணியிலும், அதிகபட்சம் சுமார் 6 மணி நேரத்துக்கு ஒருமுறை. உங்களைப் பற்றி எதுவும் அனுப்பப்படுவதில்லை: நீங்கள் தேர்ந்தெடுத்த தேதிகளோ, உங்கள் நினைவூட்டல்களோ, கணக்குகளோ அனுப்பப்படாது.</li>
+      <li><strong>உள்நுழைவு, நீங்கள் உள்நுழையத் தேர்ந்தெடுத்தால் மட்டும்</strong>: உங்கள் மின்னஞ்சல் முகவரி (நீங்கள் சேர்த்தால் பெயரும்) எங்கள் உள்நுழைவு சர்வருக்குச் செல்லும்; <a href="#account-ta">விருப்ப உள்நுழைவு</a> பகுதியைப் பார்க்கவும்.</li>
+      <li><strong>Google Drive காப்புப் பிரதி, நீங்கள் இயக்கினால் மட்டும்</strong>: பூட்டிய காப்புப் பிரதிக் கோப்பு உங்கள் சொந்த Google Drive-க்குச் செல்லும்; <a href="#drive-ta">தானியங்கி Google Drive காப்புப் பிரதி</a> பகுதியைப் பார்க்கவும்.</li>
       <li><strong>ஸ்கேனருக்கான உரை படிக்கும் கோப்புகள் (Android)</strong>: ஸ்கேனரில் "உரை" வசதியை ஒரு மொழியில் முதல்முறை பயன்படுத்தும்போது, அந்தத் திரையில் நீங்கள் ஒப்புக்கொண்ட பிறகே, அந்த மொழியின் படிக்கும் கோப்பை (1–5 MB) GitHub-இல் உள்ள Tesseract திட்டத்திலிருந்து (<strong>raw.githubusercontent.com/tesseract-ocr/</strong>) செயலி பதிவிறக்குகிறது. உரை உங்கள் போனிலேயே படிக்கப்படுகிறது: நீங்கள் ஸ்கேன் செய்த பக்கங்கள் எங்கும் அனுப்பப்படுவதில்லை.</li>
     </ul>
     <p>இந்தக் கோரிக்கைகள் ஒரு கோப்பைப் பெறுவது மட்டுமே; நீங்கள் தட்டச்சு செய்தவையோ தனிப்பட்ட தகவலோ அவற்றில் இல்லை. எந்த இணையதளத்தையும் போலவே, இந்தச் சேவைகளுக்கு உங்கள் போனின் IP முகவரி தெரியலாம்.</p>
     <p>HSN/SAC பட்டியல், GST விகிதங்கள், வருமான வரி விதிகள் மற்றும் பிற விகிதங்கள் செயலிக்குள்ளேயே உள்ளன; அவற்றுக்கு இணையம் தேவையில்லை. நாட்காட்டி, பஞ்சாங்கம், பண்டிகைகள், சூரிய உதய நேரங்கள் உங்கள் போனிலேயே கணக்கிடப்படுகின்றன.</p>
+
+    <h2 id="account-ta">விருப்ப உள்நுழைவு</h2>
+    <p>உங்கள் மின்னஞ்சல் முகவரி மூலம் உள்நுழையலாம் (☰ → Ganakah-வில் உள்நுழை). உள்நுழைவு விருப்பத்திற்குரியது; 18 வயது அல்லது அதற்கு மேற்பட்டவர்களுக்கு மட்டும். யாரும் உள்நுழையாமலேயே எல்லாக் கருவிகளையும் பயன்படுத்தலாம்.</p>
+    <ul>
+      <li><strong>நாங்கள் வைத்திருப்பவை:</strong> உங்கள் மின்னஞ்சல் முகவரி, நீங்கள் சேர்க்கும் பெயர் (விருப்பம்), கணக்கு உருவான நேரம், கடைசியாக உள்நுழைந்த நேரம். வேறு எதுவும் இல்லை: உங்கள் குறிப்புகள், பணிகள், நினைவூட்டல்கள், டிஜிட்டல் கணக்குகள், பெட்டகம், நாட்காட்டி, வரலாறு அல்லது செயலியில் உள்ள வேறு எதுவும் இல்லை. நீங்கள் உள்நுழைந்ததால் இவை உங்கள் போனை விட்டு ஒருபோதும் வெளியேறாது.</li>
+      <li><strong>ஏன்:</strong> உங்களை உள்நுழைய வைக்கவும், உங்கள் கணக்கு பற்றித் தொடர்புகொள்ளவும் மட்டுமே.</li>
+      <li><strong>எப்படி:</strong> செயலி உங்கள் மின்னஞ்சல் முகவரியை எங்கள் உள்நுழைவு சர்வருக்கு (<strong>api.saraswathytaxedge.com</strong>, Cloudflare-இல் இயங்குகிறது) அனுப்பும். சர்வர் MSG91 (எங்கள் மின்னஞ்சல் சேவை) மூலம் no-reply@mail.saraswathytaxedge.com முகவரியிலிருந்து 6 இலக்கக் குறியீட்டை உங்களுக்கு மின்னஞ்சலில் அனுப்பும். குறியீடு 10 நிமிடங்கள் செல்லும்; அதன் மறையாக்கப்பட்ட வடிவத்தை (hash) மட்டுமே வைத்திருக்கிறோம், குறியீட்டை ஒருபோதும் இல்லை; பயன்படுத்தியதும் அல்லது காலாவதியானதும் நீக்கிவிடுவோம். குறியீட்டை உள்ளிட்ட பிறகு, செயலி உங்கள் போனின் பாதுகாப்பான சேமிப்பில் ஒரு உள்நுழைவுச் சாவியை வைத்திருக்கும்; அது 90 நாட்கள் செல்லும், நீங்கள் செயலியைப் பயன்படுத்தும்வரை புதுப்பிக்கப்படும்.</li>
+      <li><strong>எங்களுக்காக இதைக் கையாள்பவர்கள்:</strong> Cloudflare, Inc. எங்கள் உள்நுழைவு சர்வரையும் அதன் தரவுத்தளத்தையும் இயக்குகிறது; MSG91 (Walkover Web Solutions Pvt. Ltd.) குறியீட்டு மின்னஞ்சலை அனுப்புகிறது. அவர்கள் எங்கள் அறிவுறுத்தலின்படி மட்டுமே, எங்கள் தரவுச் செயலாக்குநர்களாக (processors) செயல்படுகிறார்கள்; உங்கள் மின்னஞ்சல் முகவரியை வேறு எதற்கும் பயன்படுத்தக் கூடாது. உங்கள் கணக்குத் தரவு இந்தியாவுக்கு வெளியே உள்ள சர்வர்களில் சேமிக்கப்படலாம், செயலாக்கப்படலாம்.</li>
+      <li><strong>எவ்வளவு காலம்:</strong> நீங்கள் கணக்கை நீக்கும்வரை. நீக்கியதும் எங்கள் சர்வரிலிருந்து உடனே நீக்கப்படும் (எங்கள் சர்வரின் தானியங்கி காப்புப் பிரதி நகல்கள் 30 நாட்களுக்குள் மாறிவிடும்). மின்னஞ்சல் சேவை (MSG91) குறியீட்டு மின்னஞ்சல்களின் அனுப்புதல் பதிவை (delivery log) தனது சொந்தத் தக்கவைப்புக் கொள்கையின்படி வைத்திருக்கும்; நீங்கள் கணக்கை நீக்கும்போது, அதிலிருந்து உங்கள் மின்னஞ்சல் முகவரியை நீக்குமாறு MSG91-இடம் கேட்போம்.</li>
+      <li><strong>உங்கள் உரிமைகள்</strong> (டிஜிட்டல் தனிநபர் தரவுப் பாதுகாப்புச் சட்டம், 2023): சுயவிவரத் திரையில் உங்கள் மின்னஞ்சலையும் பெயரையும் பார்க்கலாம், பெயரைத் திருத்தலாம், எப்போது வேண்டுமானாலும் கணக்கை நீக்கலாம் (<a href="#delete-account-ta">உங்கள் கணக்கை நீக்க</a> பகுதியைப் பார்க்கவும்). கணக்கை நீக்குவதன் மூலம் உங்கள் ஒப்புதலைத் திரும்பப் பெறலாம்; அது இல்லாமலும் செயலி வேலை செய்யும்.</li>
+    </ul>
+
+    <h2 id="delete-account-ta">உங்கள் கணக்கை நீக்க</h2>
+    <p>செயலியில்: ☰ → மேலே உங்கள் பெயர் → சுயவிவரம் → கணக்கை நீக்கு, பிறகு DELETE என்று தட்டச்சு செய்யவும். இது உங்கள் மின்னஞ்சல் முகவரி, பெயர், உள்நுழைவு நேரங்களை எங்கள் சர்வரிலிருந்து உடனே நீக்கி, உங்களை வெளியேற்றும். "இந்த ஃபோனில் உள்ள தரவையும் அழி" என்பதையும் டிக் செய்தால் தவிர, உங்கள் போனில் உள்ள செயலித் தரவு அப்படியே இருக்கும்.</p>
+    <p>செயலி இல்லாமல்: கணக்கின் மின்னஞ்சல் முகவரியிலிருந்து <a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a> முகவரிக்கு எழுதி, "Delete my Ganakah account" என்ற தலைப்புடன் கணக்கை நீக்கக் கேட்கவும். 30 நாட்களுக்குள் நீக்கி, மின்னஞ்சலில் உறுதிப்படுத்துவோம். இந்த வழிமுறைகள் <a href="delete-account.html#ta">Ganakah கணக்கை நீக்க</a> பக்கத்திலும் உள்ளன.</p>
+
+    <h2 id="drive-ta">தானியங்கி Google Drive காப்புப் பிரதி</h2>
+    <p>நீங்கள் இயக்கும்வரை இது அணைந்தே இருக்கும் (☰ → காப்புப்பிரதி → தானியங்கி காப்புப் பிரதி).</p>
+    <ul>
+      <li><strong>எங்கே செல்கிறது:</strong> <em>உங்கள் சொந்த</em> Google Drive-இன் மறைந்த செயலிக் கோப்புறைக்கு. Ganakah Google-இடம் <code>drive.appdata</code> அனுமதியை மட்டுமே கேட்கிறது: அந்தக் கோப்புறையில் தான் உருவாக்கிய கோப்புகளை மட்டுமே அது பார்க்க முடியும். உங்கள் Drive-இல் உள்ள வேறு எந்தக் கோப்பையும் பார்க்கவோ, படிக்கவோ, மாற்றவோ முடியாது. காப்புப் பிரதி ஒருபோதும் எங்கள் சர்வருக்கு வராது.</li>
+      <li><strong>உங்கள் கடவுச்சொல்லால் பூட்டப்பட்டது:</strong> ஒவ்வொரு காப்புப் பிரதியும் பதிவேற்றும் முன் உங்கள் போனிலேயே உருவாக்கப்பட்டு, நீங்கள் தேர்ந்தெடுக்கும் கடவுச்சொல்லால் மறையாக்கப்படுகிறது (AES-256). அந்தக் கடவுச்சொல் இல்லாமல் யாராலும் திறக்க முடியாது: Google-ஆலும் இல்லை, எங்களாலும் இல்லை. கடவுச்சொல் சேமிக்கப்படுவதில்லை; அதிலிருந்து உருவான ஒரு சாவியை மட்டும் போன் தன் பாதுகாப்பான சேமிப்பில் வைத்திருக்கும். பெட்டகம் தானியங்கி காப்புப் பிரதியில் ஒருபோதும் சேராது.</li>
+      <li><strong>Google உள்நுழைவு:</strong> இந்த அனுமதியைக் கொடுக்க உங்கள் போனில் உங்கள் Google கணக்கில் உள்நுழைகிறீர்கள். காப்புப் பிரதி எந்தக் கணக்குக்குச் செல்கிறது என்று காட்ட மட்டுமே உங்கள் Google கணக்கின் மின்னஞ்சல் முகவரி போனில் பயன்படுகிறது; அது எங்களுக்கு அனுப்பப்படாது.</li>
+      <li><strong>எவ்வளவு காலம்:</strong> புதிய 2 காப்புப் பிரதிகள் வைக்கப்படும், பழையவை நீக்கப்படும். காப்புப் பிரதியை அணைத்தால் Ganakah Google-இலிருந்து வெளியேறும்; ஏற்கனவே உங்கள் Drive-இல் உள்ள காப்புப் பிரதிகள் நீங்கள் நீக்கும்வரை இருக்கும் (Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data).</li>
+    </ul>
 
     <h2>குரல் தட்டச்சு</h2>
     <p>Android-இல் 🎤 பொத்தான் (குறிப்புகள், பணிகள், நினைவூட்டல்களில்) உங்கள் போனின் சொந்தக் குரல் தட்டச்சுத் திரையைத் திறக்கிறது; பெரும்பாலும் Google-இன் பேச்சு சேவை. Ganakah தானாக எதையும் பதிவு செய்வதில்லை; இதற்கு மைக்ரோஃபோன் அனுமதியைப் பயன்படுத்துவதும் இல்லை. போனின் பேச்சு சேவை உங்கள் குரலைச் சொற்களாக மாற்றி Ganakah-க்குத் தருகிறது. அந்தச் சேவை உங்கள் குரலை அடையாளம் காண Google-க்கு அனுப்பலாம் (உங்கள் போனில் அந்த மொழி இருந்தால் இணையம் இல்லாமலும் வேலை செய்யும்); இது Google-இன் சொந்தத் தனியுரிமைக் கொள்கையின்படி நடக்கும். முதல் பயன்பாட்டுக்கு முன் செயலி இதை ஒருமுறை சொல்லும். iPhone-இல் விசைப்பலகையின் சொந்தக் குரல் தட்டச்சைப் பயன்படுத்துங்கள்.</p>
@@ -197,7 +252,7 @@
       <li><strong>பெட்டகம்:</strong> உங்கள் போனின் கைரேகை, முகம் அல்லது PIN-க்குப் பிறகு மட்டுமே திறக்கும். நீங்கள் சேர்க்கும் படங்களும் PDF-களும் தனிச் சாவியால் ஒவ்வொன்றாக மறையாக்கப்படும்; போனின் கேலரிக்கு ஒருபோதும் செல்லாது. Android-இல் பெட்டகத் திரைகளில் ஸ்கிரீன்ஷாட், திரைப் பதிவு தடுக்கப்படும்.</li>
       <li><strong>பதிவைப் பகிர்தல்:</strong> செயலி மீண்டும் திறக்கக் கேட்கும்; அந்தப் பகிர்வுக்காக மட்டும் ஒரு மறைநீக்கிய நகல் உருவாக்கி, பின் நீக்கிவிடும்.</li>
       <li><strong>போன் காப்புப் பிரதிகள்:</strong> Ganakah-க்கு Android-இன் தானியங்கி கிளவுட் காப்புப் பிரதி அணைக்கப்பட்டுள்ளது; மறையாக்கப்பட்ட தரவைச் சாவி இல்லாமல் வேறு போனில் திறக்க முடியாது.</li>
-      <li><strong>Ganakah காப்புப் பிரதி (மேலும் → காப்புப் பிரதி):</strong> நீங்கள் தேர்ந்தெடுக்கும் கடவுச்சொல்லால் பூட்டிய ஒரு காப்புப் பிரதிக் கோப்பை உருவாக்கி, விரும்பிய இடத்தில் பகிரலாம் அல்லது சேமிக்கலாம் (எ.கா. உங்கள் சொந்த Google Drive அல்லது மின்னஞ்சல்). அது உங்கள் போனிலேயே உருவாகிறது; உங்கள் கடவுச்சொல் இல்லாமல் யாராலும், எங்களாலும் கூட, திறக்க முடியாது. பெட்டகத்தைத் திறந்த பிறகு நீங்கள் இயக்கினால் மட்டுமே அது சேர்க்கப்படும். மீட்டெடுப்பது நீங்கள் தேர்ந்தெடுக்கும் காப்புப் பிரதிக் கோப்பைப் படிக்கும். Ganakah தானாக எங்கும் காப்புப் பிரதியைப் பதிவேற்றுவதில்லை.</li>
+      <li><strong>Ganakah காப்புப் பிரதி (மேலும் → காப்புப் பிரதி):</strong> நீங்கள் தேர்ந்தெடுக்கும் கடவுச்சொல்லால் பூட்டிய ஒரு காப்புப் பிரதிக் கோப்பை உருவாக்கி, விரும்பிய இடத்தில் பகிரலாம் அல்லது சேமிக்கலாம் (எ.கா. உங்கள் சொந்த Google Drive அல்லது மின்னஞ்சல்). அது உங்கள் போனிலேயே உருவாகிறது; உங்கள் கடவுச்சொல் இல்லாமல் யாராலும், எங்களாலும் கூட, திறக்க முடியாது. பெட்டகத்தைத் திறந்த பிறகு நீங்கள் இயக்கினால் மட்டுமே அது சேர்க்கப்படும். மீட்டெடுப்பது நீங்கள் தேர்ந்தெடுக்கும் காப்புப் பிரதிக் கோப்பைப் படிக்கும். நீங்களே இயக்கும் <a href="#drive-ta">தானியங்கி Google Drive காப்புப் பிரதி</a> தவிர, Ganakah தானாக எங்கும் காப்புப் பிரதியைப் பதிவேற்றுவதில்லை.</li>
     </ul>
 
     <h2>திட்டமிடல், சந்திப்புகள், டைமர்கள், போன் நாட்காட்டி</h2>
@@ -208,7 +263,7 @@
     </ul>
 
     <h2>குழந்தைகள்</h2>
-    <p>Ganakah பெரியவர்களுக்கானது. குழந்தைகள் உட்பட யாரிடமிருந்தும் இது எந்தத் தகவலையும் சேகரிப்பதில்லை.</p>
+    <p>Ganakah பெரியவர்களுக்கானது. உள்நுழைவு 18 வயது அல்லது அதற்கு மேற்பட்டவர்களுக்கு மட்டும்; அதைவிட இளையவர்கள் உள்நுழையாமலேயே எல்லாக் கருவிகளையும் பயன்படுத்தலாம். குழந்தைகளின் எந்தத் தரவையும் நாங்கள் தெரிந்தே வைத்திருப்பதில்லை.</p>
 
     <h2>அதிகாரப்பூர்வச் செயலி அல்ல</h2>
     <p>Ganakah வருமான வரித் துறை, CBIC, GSTN அல்லது எந்த அரசு அமைப்புடனும் தொடர்புடையது அல்ல; அவற்றின் ஒப்புதல் பெற்றதும் அல்ல. முடிவுகள் வழிகாட்டுதல் மட்டுமே; அவை வரி, சட்ட அல்லது முதலீட்டு ஆலோசனை அல்ல. முக்கியத் தொகைகளை அதிகாரப்பூர்வ ஆதாரத்தில் சரிபார்க்கவும்.</p>
@@ -216,11 +271,14 @@
     <h2>இந்தக் கொள்கையில் மாற்றங்கள்</h2>
     <p>இந்தக் கொள்கை மாறினால், புதிய பதிப்பு புதிய நடைமுறை நாளுடன் இந்தப் பக்கத்தில் வெளியிடப்படும்; செயலியின் ஸ்டோர் பக்கமும் புதுப்பிக்கப்படும். செயலி பயன்படுத்தும் தகவலில் ஏதேனும் மாற்றம் வந்தால், அந்தப் புதுப்பிப்பு வெளியாகும் முன் செயலியின் வெளியீட்டுக் குறிப்புகளிலும் (release notes) தெரிவிக்கப்படும்.</p>
 
+    <h2 id="grievance-ta">கேள்விகளும் புகார்களும் (குறைதீர்ப்புத் தொடர்பு)</h2>
+    <p>உங்கள் தனிப்பட்ட தரவு பற்றிய எந்தக் கேள்வி, கோரிக்கை அல்லது புகாருக்கும் எங்கள் குறைதீர்ப்புத் தொடர்பு முகவரி <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a>-க்கு எழுதவும். 30 நாட்களுக்குள் பதில் அளிப்போம். எங்கள் பதிலில் திருப்தி இல்லையென்றால், இந்தியத் தரவுப் பாதுகாப்பு வாரியத்திடம் (Data Protection Board of India) புகார் செய்யலாம்.</p>
+
     <h2>தொடர்புக்கு</h2>
     <p>Saraswathy Tax Edge Advisory LLP<br>மின்னஞ்சல்: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a><br>இணையதளம்: <a href="https://saraswathytaxedge.com">saraswathytaxedge.com</a></p>
   </section>
 
-  <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="../">All apps</a></footer>
+  <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="terms.html">Terms of use</a> · <a href="delete-account.html">Delete account</a> · <a href="../">All apps</a></footer>
 </main>
 </body>
 </html>
