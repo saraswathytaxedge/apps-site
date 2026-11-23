@@ -3,38 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ganakah – Delete your account</title>
+<title>Delete your Ganakah account</title>
 <meta name="description" content="How to delete your Ganakah account and what is deleted.">
 <link rel="icon" href="../favicon.png">
 <style>
-  :root { --bg: #F3F5FA; --card: #FFFFFF; --ink: #1C2756; --text: #1E2235; --muted: #5D6584; --line: #DCE1EE; --rule: #C7323E; }
+  :root { --bg: #F3F5FA; --card: #FFFFFF; --ink: #1C2756; --text: #1E2235; --muted: #5D6584; --line: #DCE1EE; --rule: #C7323E; --note: #FFF6E0; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #121628; --card: #1A1F36; --ink: #C9D2FF; --text: #E8EAF4; --muted: #99A0BD; --line: #2B3252; --rule: #FF6670; }
+    :root { --bg: #121628; --card: #1A1F36; --ink: #C9D2FF; --text: #E8EAF4; --muted: #99A0BD; --line: #2B3252; --rule: #FF6670; --note: #2E2A1C; }
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Tamil", sans-serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 16px 16px 48px; }
-  .switch { display: flex; gap: 8px; justify-content: flex-end; margin-bottom: 8px; }
-  .switch a { color: var(--ink); text-decoration: none; border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 6px 14px; font-weight: 600; font-size: 15px; }
-  section { background: var(--card); border: 1px solid var(--line); border-left: 6px double var(--rule); border-radius: 14px; padding: 4px 20px 20px; margin-top: 16px; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Tamil", "Noto Sans Devanagari", "Noto Sans Telugu", "Noto Sans Malayalam", "Noto Sans Kannada", "Noto Sans Gujarati", "Noto Sans Oriya", "Noto Sans Bengali", "Nirmala UI", sans-serif; }
+  .top { max-width: 720px; margin: 0 auto; padding: 12px 16px 0; display: flex; justify-content: flex-end; }
+  .lang { position: relative; }
+  .lang > button { font: inherit; font-size: 15px; font-weight: 600; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+  .lang ul { position: absolute; right: 0; top: calc(100% + 6px); z-index: 10; list-style: none; margin: 0; padding: 6px; min-width: 170px; max-height: 70vh; overflow-y: auto; background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+  .lang ul[hidden] { display: none; }
+  .lang li button { display: block; width: 100%; text-align: left; font: inherit; font-size: 16px; color: var(--text); background: none; border: 0; border-radius: 10px; padding: 8px 12px; cursor: pointer; }
+  .lang li button:hover, .lang li button:focus { background: var(--bg); outline: none; }
+  .lang li button:focus-visible { outline: 2px solid var(--ink); }
+  .lang li button[aria-checked="true"] { color: var(--ink); font-weight: 700; }
+  .lang li button[aria-checked="true"]::after { content: " ✓"; }
+  main { max-width: 720px; margin: 0 auto; padding: 8px 16px 48px; }
+  article[hidden] { display: none; }
+  a { color: var(--ink); }
+  footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 24px; }
+  article { background: var(--card); border: 1px solid var(--line); border-left: 6px double var(--rule); border-radius: 14px; padding: 4px 20px 16px; margin-top: 8px; }
   h1 { color: var(--ink); font-size: 26px; line-height: 1.25; margin: 18px 0 4px; }
   h2 { color: var(--ink); font-size: 18px; margin: 24px 0 4px; }
   p, li { margin: 6px 0; }
   ul, ol { padding-left: 22px; }
   .meta { color: var(--muted); font-size: 15px; margin: 0; }
-  a { color: var(--ink); }
-  footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 24px; }
+  .note { background: var(--note); border-radius: 10px; padding: 8px 12px; margin: 16px 0 0; font-size: 15px; }
+  article footer { border-top: 1px solid var(--line); padding-top: 12px; }
+  code { font-size: 15px; }
 </style>
 </head>
 <body>
+<!-- One language at a time: ?lang=xx (en ta hi te ml kn mr gu or bn), else the last choice, else English. Without
+     JavaScript the English text shows. Each translation is an <article data-lang>; its ids get the language in front. -->
+<header class="top">
+  <div class="lang" id="lang" hidden>
+    <button type="button" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list" aria-label="Language">🌐 <span id="lang-name">English</span> ▾</button>
+    <ul id="lang-list" role="menu" aria-label="Language" hidden>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="true" data-lang="en" lang="en">English</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="ta" lang="ta">தமிழ்</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="hi" lang="hi">हिन्दी</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="te" lang="te">తెలుగు</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="ml" lang="ml">മലയാളം</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="kn" lang="kn">ಕನ್ನಡ</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="mr" lang="mr">मराठी</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="gu" lang="gu">ગુજરાતી</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="or" lang="or">ଓଡ଼ିଆ</button></li>
+      <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="bn" lang="bn">বাংলা</button></li>
+    </ul>
+  </div>
+</header>
 <main>
-  <nav class="switch" aria-label="Language">
-    <a href="#en" hreflang="en">English</a>
-    <a href="#ta" hreflang="ta" lang="ta">தமிழ்</a>
-  </nav>
-
-  <section id="en" lang="en">
+  <article lang="en" data-lang="en" data-title="Delete your Ganakah account">
     <h1>Delete your Ganakah account</h1>
     <p class="meta">Ganakah by Saraswathy Tax Edge Advisory LLP · Updated: 23 November 2026</p>
 
@@ -67,11 +93,11 @@
     </ul>
 
     <p>Questions: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html">Privacy policy</a></p>
-  </section>
-
-  <section id="ta" lang="ta">
-    <h1>Ganakah கணக்கை நீக்க</h1>
-    <p class="meta">Ganakah · Saraswathy Tax Edge Advisory LLP · புதுப்பித்தது: 23 நவம்பர் 2026</p>
+    <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="../">All apps</a></footer>
+  </article>
+  <article lang="ta" data-lang="ta" data-title="உங்கள் Ganakah கணக்கை நீக்க" hidden>
+    <h1>உங்கள் Ganakah கணக்கை நீக்க</h1>
+    <p class="meta">Saraswathy Tax Edge Advisory LLP வழங்கும் Ganakah · புதுப்பித்தது: 23 நவம்பர் 2026</p>
 
     <p>Ganakah-வில் உள்நுழைவது விருப்பத்திற்குரியது. நீங்கள் கணக்கு உருவாக்கியிருந்தால், கீழ்க்கண்ட இரண்டு வழிகளில் ஏதேனும் ஒன்றில் எப்போது வேண்டுமானாலும் அதை நீக்கலாம்.</p>
 
@@ -85,26 +111,395 @@
     <p><strong>"இந்த ஃபோனில் உள்ள தரவையும் அழி"</strong> என்பதையும் டிக் செய்தால், அந்தப் போனில் உள்ள செயலித் தரவும் (குறிப்புகள், பணிகள், நினைவூட்டல்கள், கணக்குகள், ஸ்கேன்கள், பெட்டகம், வரலாறு) அழிக்கப்படும். டிக் செய்யாவிட்டால் அவை உங்கள் போனிலேயே இருக்கும்.</p>
 
     <h2>செயலி இல்லாமல்</h2>
-    <p><strong>உங்கள் கணக்கின் மின்னஞ்சல் முகவரியிலிருந்து</strong> <a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a> முகவரிக்கு <strong>"Delete my Ganakah account"</strong> என்ற தலைப்புடன் மின்னஞ்சல் அனுப்பவும். அந்த முகவரியிலிருந்து பதில் அனுப்பி உறுதிப்படுத்தக் கேட்கலாம். 30 நாட்களுக்குள் கணக்கை நீக்கி, முடிந்ததும் மின்னஞ்சலில் தெரிவிப்போம்.</p>
+    <p><a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a> முகவரிக்கு <strong>உங்கள் கணக்கின் மின்னஞ்சல் முகவரியிலிருந்து</strong>, <strong>"Delete my Ganakah account"</strong> என்ற தலைப்புடன் மின்னஞ்சல் அனுப்பவும். அந்த முகவரியிலிருந்து பதில் அனுப்பி உறுதிப்படுத்துமாறு நாங்கள் கேட்கலாம். 30 நாட்களுக்குள் கணக்கை நீக்கி, முடிந்ததும் மின்னஞ்சலில் தெரிவிப்போம்.</p>
 
     <h2>நீக்கப்படுபவை</h2>
     <ul>
       <li>உங்கள் மின்னஞ்சல் முகவரி, உங்கள் பெயர் (சேர்த்திருந்தால்), உள்நுழைந்த நேரங்கள். கணக்கில் இருப்பது இவை மட்டுமே.</li>
-      <li>செயலியில் நீக்கினால் அவை எங்கள் சர்வரிலிருந்து உடனே நீக்கப்பட்டு, அந்தப் போனில் நீங்கள் வெளியேற்றப்படுவீர்கள் (எங்கள் சர்வரின் தானியங்கி காப்புப் பிரதி நகல்கள் 30 நாட்களுக்குள் மாறிவிடும்).</li>
+      <li>செயலியில் நீக்கினால் அவை எங்கள் சர்வரிலிருந்து உடனே நீக்கப்பட்டு, அந்தப் போனில் நீங்கள் வெளியேற்றப்படுவீர்கள் (எங்கள் சர்வரின் தானியங்கி காப்புப் பிரதி நகல்கள் 30 நாட்களுக்குள் மாற்றி எழுதப்படும்).</li>
       <li>மின்னஞ்சல் சேவை (MSG91) குறியீட்டு மின்னஞ்சல்களின் அனுப்புதல் பதிவை (delivery log) தனது சொந்தத் தக்கவைப்புக் கொள்கையின்படி வைத்திருக்கும்; நீங்கள் கணக்கை நீக்கும்போது, அதிலிருந்து உங்கள் மின்னஞ்சல் முகவரியை நீக்குமாறு MSG91-இடம் கேட்போம்.</li>
       <li>அதன் பிறகு நாங்கள் எதையும் வைத்திருப்பதில்லை. பின்னர் அதே மின்னஞ்சலுடன் மீண்டும் உள்நுழைந்தால், புதிய வெற்றுக் கணக்கு உருவாகும்.</li>
     </ul>
 
     <h2>பாதிக்கப்படாதவை</h2>
     <ul>
-      <li>உங்கள் செயலித் தரவு எங்கள் சர்வரில் ஒருபோதும் இருந்ததில்லை: "இந்த ஃபோனில் உள்ள தரவையும் அழி" டிக் செய்யாவிட்டால் அல்லது செயலியை நீக்காவிட்டால் அது உங்கள் போனிலேயே இருக்கும்.</li>
-      <li>உங்கள் சொந்த Google Drive-இலோ வேறு இடத்திலோ உள்ள காப்புப் பிரதிகள் உங்களுடையவை; அவை நீக்கப்படாது. தானியங்கி Google Drive காப்புப் பிரதிகளை நீக்க: Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data.</li>
+      <li>உங்கள் செயலித் தரவு எங்கள் சர்வரில் ஒருபோதும் இருந்ததில்லை: "இந்த ஃபோனில் உள்ள தரவையும் அழி" என்பதை டிக் செய்தால் அல்லது செயலியை நீக்கினால் (uninstall) தவிர, அது உங்கள் போனிலேயே இருக்கும்.</li>
+      <li>உங்கள் சொந்த Google Drive-இலோ வேறு இடத்திலோ உள்ள காப்புப் பிரதிகள் உங்களுடையவை; அவை நீக்கப்படாது. தானியங்கி Google Drive காப்புப் பிரதிகளை நீக்க, Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data என்பதைத் திறக்கவும்.</li>
     </ul>
 
-    <p>கேள்விகளுக்கு: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html#ta">தனியுரிமைக் கொள்கை</a></p>
-  </section>
+    <p>கேள்விகளுக்கு: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html">தனியுரிமைக் கொள்கை</a></p>
+    <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">தனியுரிமைக் கொள்கை</a> · <a href="terms.html">பயன்பாட்டு விதிமுறைகள்</a> · <a href="../">எல்லாச் செயலிகளும்</a></footer>
+  </article>
+  <article lang="hi" data-lang="hi" data-title="अपना Ganakah खाता हटाएँ" hidden>
+    <h1>अपना Ganakah खाता हटाएँ</h1>
+    <p class="meta">Saraswathy Tax Edge Advisory LLP का Ganakah · अद्यतन: 23 नवंबर 2026</p>
 
-  <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="../">All apps</a></footer>
+    <p>Ganakah में साइन इन करना वैकल्पिक है। यदि आपने खाता बनाया है, तो आप इसे कभी भी, नीचे दिए गए दो में से किसी भी तरीके से हटा सकते हैं।</p>
+
+    <h2>ऐप में</h2>
+    <ol>
+      <li>Ganakah खोलें और <strong>☰</strong> (ऊपर दाईं ओर) पर टैप करें।</li>
+      <li><strong>प्रोफ़ाइल</strong> खोलने के लिए सबसे ऊपर अपने नाम या ईमेल पर टैप करें।</li>
+      <li><strong>खाता हटाएँ</strong> पर टैप करें।</li>
+      <li>पुष्टि के लिए <strong>DELETE</strong> टाइप करें और <strong>खाता हटाएँ</strong> पर टैप करें।</li>
+    </ol>
+    <p>यदि आप <strong>"इस फ़ोन का डेटा भी मिटाएँ"</strong> पर भी टिक करते हैं, तो उस फ़ोन पर ऐप का डेटा (नोट्स, काम, रिमाइंडर, अकाउंट्स, स्कैन, तिजोरी, इतिहास) भी मिटा दिया जाता है। टिक न करने पर यह डेटा आपके फ़ोन पर बना रहता है।</p>
+
+    <h2>ऐप के बिना</h2>
+    <p><a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a> पर ईमेल भेजें, <strong>अपने खाते के ईमेल पते से</strong>, और विषय रखें <strong>"Delete my Ganakah account"</strong>। हम आपसे उसी पते से उत्तर देकर पुष्टि करने के लिए कह सकते हैं। हम 30 दिनों के भीतर खाता हटा देते हैं और काम पूरा होने पर आपको ईमेल से सूचित करते हैं।</p>
+
+    <h2>क्या हटाया जाता है</h2>
+    <ul>
+      <li>आपका ईमेल पता, आपका नाम (यदि आपने जोड़ा हो) और आपके साइन-इन के समय। खाते में बस इतना ही रहता है।</li>
+      <li>ऐप में खाता हटाने पर ये सब हमारे सर्वर से तुरंत हटा दिए जाते हैं और उस फ़ोन पर आप साइन आउट हो जाते हैं (हमारे सर्वर की स्वचालित बैकअप प्रतियाँ 30 दिनों के भीतर बदल जाती हैं)।</li>
+      <li>ईमेल सेवा (MSG91) कोड वाले ईमेल का डिलीवरी लॉग अपनी स्वयं की प्रतिधारण नीति के अनुसार रखती है; जब आप अपना खाता हटाते हैं, तो हम MSG91 से उसमें से आपका ईमेल पता हटाने का अनुरोध करते हैं।</li>
+      <li>इसके बाद हम कुछ भी नहीं रखते। यदि आप बाद में उसी ईमेल से फिर साइन इन करते हैं, तो एक नया, खाली खाता बनता है।</li>
+    </ul>
+
+    <h2>किस पर कोई असर नहीं पड़ता</h2>
+    <ul>
+      <li>आपका ऐप डेटा कभी हमारे सर्वर पर नहीं था: यह आपके फ़ोन पर ही रहता है, जब तक आप "इस फ़ोन का डेटा भी मिटाएँ" पर टिक न करें या ऐप अनइंस्टॉल न करें।</li>
+      <li>आपके अपने Google Drive या किसी अन्य स्थान पर रखे बैकअप आपके हैं और हटाए नहीं जाते। स्वचालित Google Drive बैकअप हटाने के लिए Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data खोलें।</li>
+    </ul>
+
+    <p>प्रश्न: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html">गोपनीयता नीति</a></p>
+    <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">गोपनीयता नीति</a> · <a href="terms.html">उपयोग की शर्तें</a> · <a href="../">सभी ऐप</a></footer>
+  </article>
+  <article lang="te" data-lang="te" data-title="మీ Ganakah ఖాతాను తొలగించండి" hidden>
+    <h1>మీ Ganakah ఖాతాను తొలగించండి</h1>
+    <p class="meta">Saraswathy Tax Edge Advisory LLP వారి Ganakah · నవీకరించిన తేదీ: 23 నవంబర్ 2026</p>
+
+    <p>Ganakahలో సైన్ ఇన్ చేయడం ఐచ్ఛికం. మీరు ఖాతా సృష్టించి ఉంటే, దానిని ఎప్పుడైనా ఈ రెండు పద్ధతుల్లో ఏదో ఒకదాని ద్వారా తొలగించవచ్చు.</p>
+
+    <h2>యాప్‌లో</h2>
+    <ol>
+      <li>Ganakah తెరిచి <strong>☰</strong> (పైన కుడివైపు) నొక్కండి.</li>
+      <li><strong>ప్రొఫైల్</strong> తెరవడానికి పైభాగంలో ఉన్న మీ పేరు లేదా ఇమెయిల్‌ను నొక్కండి.</li>
+      <li><strong>ఖాతా తొలగించు</strong> నొక్కండి.</li>
+      <li>నిర్ధారించడానికి <strong>DELETE</strong> అని టైప్ చేసి, <strong>ఖాతా తొలగించు</strong> నొక్కండి.</li>
+    </ol>
+    <p>మీరు <strong>"ఈ ఫోన్‌లోని డేటాను కూడా తుడిచివేయి"</strong> అనే దానిని కూడా టిక్ చేస్తే, ఆ ఫోన్‌లోని యాప్ డేటా (గమనికలు, పనులు, రిమైండర్లు, అకౌంట్స్, స్కాన్‌లు, భద్రపెట్టె, చరిత్ర) కూడా తుడిచివేయబడుతుంది. టిక్ చేయకపోతే అది మీ ఫోన్‌లోనే ఉంటుంది.</p>
+
+    <h2>యాప్ లేకుండా</h2>
+    <p><strong>మీ ఖాతాకు చెందిన ఇమెయిల్ చిరునామా నుంచి</strong>, <strong>"Delete my Ganakah account"</strong> అనే విషయంతో <a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a>కు ఇమెయిల్ పంపండి. ఆ చిరునామా నుంచి సమాధానం ఇచ్చి నిర్ధారించమని మేము మిమ్మల్ని అడగవచ్చు. మేము 30 రోజుల్లోగా ఖాతాను తొలగించి, అది పూర్తయినప్పుడు మీకు ఇమెయిల్ ద్వారా తెలియజేస్తాము.</p>
+
+    <h2>ఏమి తొలగించబడుతుంది</h2>
+    <ul>
+      <li>మీ ఇమెయిల్ చిరునామా, మీ పేరు (మీరు జోడించి ఉంటే) మరియు మీరు సైన్ ఇన్ చేసిన సమయాలు. ఖాతాలో ఉండేది ఇంతే.</li>
+      <li>యాప్‌లో తొలగించినప్పుడు అవి మా సర్వర్ నుంచి వెంటనే తొలగించబడతాయి మరియు ఆ ఫోన్‌లో మీరు సైన్ అవుట్ అవుతారు (మా సర్వర్ యొక్క ఆటోమేటిక్ బ్యాకప్ కాపీలు 30 రోజుల్లోగా మారిపోతాయి).</li>
+      <li>ఇమెయిల్ సేవ (MSG91) కోడ్ ఇమెయిల్‌ల డెలివరీ లాగ్‌ను తన సొంత నిల్వ విధానం ప్రకారం ఉంచుకుంటుంది; మీరు మీ ఖాతాను తొలగించినప్పుడు, అందులో నుంచి మీ ఇమెయిల్ చిరునామాను తీసివేయమని మేము MSG91ను కోరతాము.</li>
+      <li>ఆ తర్వాత మేము ఏమీ ఉంచుకోము. తర్వాత మీరు అదే ఇమెయిల్‌తో మళ్ళీ సైన్ ఇన్ చేస్తే, కొత్త, ఖాళీ ఖాతా సృష్టించబడుతుంది.</li>
+    </ul>
+
+    <h2>దేనిపై ప్రభావం ఉండదు</h2>
+    <ul>
+      <li>మీ యాప్ డేటా ఎప్పుడూ మా సర్వర్‌లో లేదు: మీరు "ఈ ఫోన్‌లోని డేటాను కూడా తుడిచివేయి" టిక్ చేస్తే లేదా యాప్‌ను అన్‌ఇన్‌స్టాల్ చేస్తే తప్ప, అది మీ ఫోన్‌లోనే ఉంటుంది.</li>
+      <li>మీ సొంత Google Driveలో లేదా ఇతర చోట్ల ఉన్న బ్యాకప్‌లు మీవే; అవి తొలగించబడవు. ఆటోమేటిక్ Google Drive బ్యాకప్‌లను తీసివేయడానికి, Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data తెరవండి.</li>
+    </ul>
+
+    <p>ప్రశ్నలు: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html">గోప్యతా విధానం</a></p>
+    <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">గోప్యతా విధానం</a> · <a href="terms.html">వినియోగ నిబంధనలు</a> · <a href="../">అన్ని యాప్‌లు</a></footer>
+  </article>
+  <article lang="ml" data-lang="ml" data-title="നിങ്ങളുടെ Ganakah അക്കൗണ്ട് ഇല്ലാതാക്കുക" hidden>
+    <h1>നിങ്ങളുടെ Ganakah അക്കൗണ്ട് ഇല്ലാതാക്കുക</h1>
+    <p class="meta">Ganakah, Saraswathy Tax Edge Advisory LLP · പുതുക്കിയത്: 23 നവംബർ 2026</p>
+
+    <p>Ganakah-ൽ സൈൻ ഇൻ ചെയ്യുന്നത് നിർബന്ധമല്ല. നിങ്ങൾ ഒരു അക്കൗണ്ട് ഉണ്ടാക്കിയിട്ടുണ്ടെങ്കിൽ, താഴെപ്പറയുന്ന രണ്ട് വഴികളിൽ ഏതെങ്കിലും ഒന്നിലൂടെ എപ്പോൾ വേണമെങ്കിലും അത് ഇല്ലാതാക്കാം.</p>
+
+    <h2>ആപ്പിൽ</h2>
+    <ol>
+      <li>Ganakah തുറന്ന് <strong>☰</strong> (മുകളിൽ വലത്) ടാപ്പ് ചെയ്യുക.</li>
+      <li><strong>പ്രൊഫൈൽ</strong> തുറക്കാൻ മുകളിലുള്ള നിങ്ങളുടെ പേരോ ഇമെയിലോ ടാപ്പ് ചെയ്യുക.</li>
+      <li><strong>അക്കൗണ്ട് ഇല്ലാതാക്കുക</strong> ടാപ്പ് ചെയ്യുക.</li>
+      <li>സ്ഥിരീകരിക്കാൻ <strong>DELETE</strong> എന്ന് ടൈപ്പ് ചെയ്ത് <strong>അക്കൗണ്ട് ഇല്ലാതാക്കുക</strong> ടാപ്പ് ചെയ്യുക.</li>
+    </ol>
+    <p><strong>"ഈ ഫോണിലെ ഡാറ്റയും മായ്ക്കുക"</strong> എന്നതുകൂടി ടിക്ക് ചെയ്താൽ, ആ ഫോണിലെ ആപ്പിന്റെ ഡാറ്റയും (കുറിപ്പുകൾ, ജോലികൾ, ഓർമ്മപ്പെടുത്തലുകൾ, അക്കൗണ്ടുകൾ, സ്കാനുകൾ, സുരക്ഷാപ്പെട്ടി, ചരിത്രം) മായ്ക്കപ്പെടും. ടിക്ക് ചെയ്തില്ലെങ്കിൽ അത് നിങ്ങളുടെ ഫോണിൽത്തന്നെ തുടരും.</p>
+
+    <h2>ആപ്പ് ഇല്ലാതെ</h2>
+    <p><strong>നിങ്ങളുടെ അക്കൗണ്ടിന്റെ ഇമെയിൽ വിലാസത്തിൽ നിന്ന്</strong>, <strong>"Delete my Ganakah account"</strong> എന്ന വിഷയത്തോടെ <a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a> എന്ന വിലാസത്തിലേക്ക് ഒരു ഇമെയിൽ അയയ്ക്കുക. ആ വിലാസത്തിൽ നിന്ന് മറുപടി നൽകി സ്ഥിരീകരിക്കാൻ ഞങ്ങൾ ആവശ്യപ്പെട്ടേക്കാം. 30 ദിവസത്തിനുള്ളിൽ ഞങ്ങൾ അക്കൗണ്ട് ഇല്ലാതാക്കുകയും അത് പൂർത്തിയാകുമ്പോൾ ഇമെയിൽ വഴി അറിയിക്കുകയും ചെയ്യും.</p>
+
+    <h2>ഇല്ലാതാക്കപ്പെടുന്നവ</h2>
+    <ul>
+      <li>നിങ്ങളുടെ ഇമെയിൽ വിലാസം, നിങ്ങളുടെ പേര് (ചേർത്തിട്ടുണ്ടെങ്കിൽ), നിങ്ങളുടെ സൈൻ-ഇൻ സമയങ്ങൾ. അക്കൗണ്ടിൽ ഉള്ളത് ഇത്രമാത്രമാണ്.</li>
+      <li>ആപ്പിൽ ഇല്ലാതാക്കുമ്പോൾ അവ ഉടൻ തന്നെ ഞങ്ങളുടെ സെർവറിൽ നിന്ന് ഇല്ലാതാക്കപ്പെടുകയും ആ ഫോണിൽ നിങ്ങൾ സൈൻ ഔട്ട് ആകുകയും ചെയ്യുന്നു (ഞങ്ങളുടെ സെർവറിന്റെ സ്വയമേവയുള്ള ബാക്കപ്പ് പകർപ്പുകൾ 30 ദിവസത്തിനുള്ളിൽ മാറ്റിയെഴുതപ്പെടുന്നു).</li>
+      <li>ഇമെയിൽ സേവനം (MSG91) കോഡ് ഇമെയിലുകളുടെ ഒരു ഡെലിവറി ലോഗ് അതിന്റെ സ്വന്തം സൂക്ഷിപ്പ് നയപ്രകാരം സൂക്ഷിക്കുന്നു; നിങ്ങൾ അക്കൗണ്ട് ഇല്ലാതാക്കുമ്പോൾ, അതിൽ നിന്ന് നിങ്ങളുടെ ഇമെയിൽ വിലാസം നീക്കം ചെയ്യാൻ ഞങ്ങൾ MSG91-നോട് ആവശ്യപ്പെടുന്നു.</li>
+      <li>അതിനുശേഷം ഞങ്ങൾ ഒന്നും സൂക്ഷിക്കുന്നില്ല. പിന്നീട് അതേ ഇമെയിൽ ഉപയോഗിച്ച് വീണ്ടും സൈൻ ഇൻ ചെയ്താൽ, പുതിയതും ശൂന്യവുമായ ഒരു അക്കൗണ്ട് ഉണ്ടാക്കപ്പെടും.</li>
+    </ul>
+
+    <h2>ബാധിക്കപ്പെടാത്തവ</h2>
+    <ul>
+      <li>നിങ്ങളുടെ ആപ്പ് ഡാറ്റ ഒരിക്കലും ഞങ്ങളുടെ സെർവറിൽ ഉണ്ടായിരുന്നില്ല: "ഈ ഫോണിലെ ഡാറ്റയും മായ്ക്കുക" ടിക്ക് ചെയ്യുകയോ ആപ്പ് അൺഇൻസ്റ്റാൾ ചെയ്യുകയോ ചെയ്തില്ലെങ്കിൽ അത് നിങ്ങളുടെ ഫോണിൽത്തന്നെ തുടരും.</li>
+      <li>നിങ്ങളുടെ സ്വന്തം Google Drive-ലോ മറ്റെവിടെയെങ്കിലുമോ ഉള്ള ബാക്കപ്പുകൾ നിങ്ങളുടേതാണ്, അവ ഇല്ലാതാക്കപ്പെടുന്നില്ല. സ്വയമേവയുള്ള Google Drive ബാക്കപ്പുകൾ നീക്കം ചെയ്യാൻ, Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data തുറക്കുക.</li>
+    </ul>
+
+    <p>ചോദ്യങ്ങൾ: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html">സ്വകാര്യതാ നയം</a></p>
+    <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">സ്വകാര്യതാ നയം</a> · <a href="terms.html">ഉപയോഗ നിബന്ധനകൾ</a> · <a href="../">എല്ലാ ആപ്പുകളും</a></footer>
+  </article>
+  <article lang="kn" data-lang="kn" data-title="ನಿಮ್ಮ Ganakah ಖಾತೆಯನ್ನು ಅಳಿಸಿ" hidden>
+    <h1>ನಿಮ್ಮ Ganakah ಖಾತೆಯನ್ನು ಅಳಿಸಿ</h1>
+    <p class="meta">Saraswathy Tax Edge Advisory LLP ಅವರ Ganakah · ನವೀಕರಿಸಿದ ದಿನಾಂಕ: 23 ನವೆಂಬರ್ 2026</p>
+
+    <p>Ganakah ಗೆ ಸೈನ್ ಇನ್ ಮಾಡುವುದು ಐಚ್ಛಿಕ. ನೀವು ಖಾತೆ ತೆರೆದಿದ್ದರೆ, ಕೆಳಗಿನ ಎರಡು ವಿಧಾನಗಳಲ್ಲಿ ಯಾವುದಾದರೂ ಒಂದರಿಂದ ಯಾವಾಗ ಬೇಕಾದರೂ ಅದನ್ನು ಅಳಿಸಬಹುದು.</p>
+
+    <h2>ಆ್ಯಪ್‌ನಲ್ಲಿ</h2>
+    <ol>
+      <li>Ganakah ತೆರೆದು <strong>☰</strong> (ಮೇಲಿನ ಬಲಭಾಗ) ಒತ್ತಿರಿ.</li>
+      <li><strong>ಪ್ರೊಫೈಲ್</strong> ತೆರೆಯಲು ಮೇಲ್ಭಾಗದಲ್ಲಿರುವ ನಿಮ್ಮ ಹೆಸರು ಅಥವಾ ಇಮೇಲ್ ಒತ್ತಿರಿ.</li>
+      <li><strong>ಖಾತೆ ಅಳಿಸಿ</strong> ಒತ್ತಿರಿ.</li>
+      <li>ಖಚಿತಪಡಿಸಲು <strong>DELETE</strong> ಎಂದು ಟೈಪ್ ಮಾಡಿ, ನಂತರ <strong>ಖಾತೆ ಅಳಿಸಿ</strong> ಒತ್ತಿರಿ.</li>
+    </ol>
+    <p>ನೀವು <strong>"ಈ ಫೋನ್‌ನ ಡೇಟಾವನ್ನೂ ಅಳಿಸಿ"</strong> ಎಂಬುದನ್ನೂ ಗುರುತಿಸಿದರೆ, ಆ ಫೋನ್‌ನಲ್ಲಿರುವ ಆ್ಯಪ್‌ನ ಡೇಟಾ (ಟಿಪ್ಪಣಿಗಳು, ಕೆಲಸಗಳು, ಜ್ಞಾಪನೆಗಳು, ಅಕೌಂಟ್ಸ್, ಸ್ಕ್ಯಾನ್‌ಗಳು, ಭದ್ರತಾ ಪೆಟ್ಟಿಗೆ, ಇತಿಹಾಸ) ಕೂಡ ಅಳಿಸಲ್ಪಡುತ್ತದೆ. ಗುರುತಿಸದಿದ್ದರೆ ಅದು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲೇ ಉಳಿಯುತ್ತದೆ.</p>
+
+    <h2>ಆ್ಯಪ್ ಇಲ್ಲದೆ</h2>
+    <p><strong>ನಿಮ್ಮ ಖಾತೆಯ ಇಮೇಲ್ ವಿಳಾಸದಿಂದಲೇ</strong> <a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a> ಗೆ <strong>"Delete my Ganakah account"</strong> ಎಂಬ ವಿಷಯದೊಂದಿಗೆ ಇಮೇಲ್ ಕಳುಹಿಸಿ. ಆ ವಿಳಾಸದಿಂದ ಉತ್ತರಿಸಿ ಖಚಿತಪಡಿಸುವಂತೆ ನಾವು ಕೇಳಬಹುದು. ನಾವು 30 ದಿನಗಳೊಳಗೆ ಖಾತೆಯನ್ನು ಅಳಿಸುತ್ತೇವೆ ಮತ್ತು ಅದು ಮುಗಿದಾಗ ಇಮೇಲ್ ಮೂಲಕ ತಿಳಿಸುತ್ತೇವೆ.</p>
+
+    <h2>ಯಾವುದು ಅಳಿಸಲ್ಪಡುತ್ತದೆ</h2>
+    <ul>
+      <li>ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸ, ನಿಮ್ಮ ಹೆಸರು (ನೀವು ಸೇರಿಸಿದ್ದರೆ) ಮತ್ತು ನಿಮ್ಮ ಸೈನ್ ಇನ್ ಸಮಯಗಳು. ಖಾತೆಯಲ್ಲಿ ಇರುವುದು ಇಷ್ಟೇ.</li>
+      <li>ಆ್ಯಪ್‌ನಲ್ಲಿ ಅಳಿಸಿದರೆ ಅವು ತಕ್ಷಣ ನಮ್ಮ ಸರ್ವರ್‌ನಿಂದ ಅಳಿಸಲ್ಪಡುತ್ತವೆ ಮತ್ತು ಆ ಫೋನ್‌ನಲ್ಲಿ ನೀವು ಸೈನ್ ಔಟ್ ಆಗುತ್ತೀರಿ (ನಮ್ಮ ಸರ್ವರ್‌ನ ಸ್ವಯಂಚಾಲಿತ ಬ್ಯಾಕಪ್ ಪ್ರತಿಗಳು 30 ದಿನಗಳೊಳಗೆ ಬದಲಾಗಿ ಹೋಗುತ್ತವೆ).</li>
+      <li>ಇಮೇಲ್ ಸೇವೆ (MSG91) ಕೋಡ್ ಇಮೇಲ್‌ಗಳ ವಿತರಣಾ ದಾಖಲೆಯನ್ನು ತನ್ನದೇ ಆದ ಉಳಿಸಿಕೊಳ್ಳುವ ನೀತಿಯಂತೆ ಇಟ್ಟುಕೊಳ್ಳುತ್ತದೆ; ನೀವು ಖಾತೆ ಅಳಿಸಿದಾಗ, ಅದರಿಂದ ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸವನ್ನು ತೆಗೆದುಹಾಕುವಂತೆ ನಾವು MSG91 ಅನ್ನು ಕೇಳುತ್ತೇವೆ.</li>
+      <li>ನಂತರ ನಾವು ಏನನ್ನೂ ಇಟ್ಟುಕೊಳ್ಳುವುದಿಲ್ಲ. ಮುಂದೆ ನೀವು ಅದೇ ಇಮೇಲ್‌ನಿಂದ ಮತ್ತೆ ಸೈನ್ ಇನ್ ಮಾಡಿದರೆ, ಹೊಸ, ಖಾಲಿ ಖಾತೆ ಸೃಷ್ಟಿಯಾಗುತ್ತದೆ.</li>
+    </ul>
+
+    <h2>ಯಾವುದರ ಮೇಲೆ ಪರಿಣಾಮವಿಲ್ಲ</h2>
+    <ul>
+      <li>ನಿಮ್ಮ ಆ್ಯಪ್ ಡೇಟಾ ಎಂದಿಗೂ ನಮ್ಮ ಸರ್ವರ್‌ನಲ್ಲಿ ಇರಲಿಲ್ಲ: ನೀವು "ಈ ಫೋನ್‌ನ ಡೇಟಾವನ್ನೂ ಅಳಿಸಿ" ಗುರುತಿಸದಿದ್ದರೆ ಅಥವಾ ಆ್ಯಪ್ ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡದಿದ್ದರೆ, ಅದು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲೇ ಉಳಿಯುತ್ತದೆ.</li>
+      <li>ನಿಮ್ಮ ಸ್ವಂತ Google Drive ಅಥವಾ ಬೇರೆಡೆ ಇರುವ ಬ್ಯಾಕಪ್‌ಗಳು ನಿಮ್ಮವು ಮತ್ತು ಅವು ಅಳಿಸಲ್ಪಡುವುದಿಲ್ಲ. ಸ್ವಯಂಚಾಲಿತ Google Drive ಬ್ಯಾಕಪ್‌ಗಳನ್ನು ತೆಗೆದುಹಾಕಲು, Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data ತೆರೆಯಿರಿ.</li>
+    </ul>
+
+    <p>ಪ್ರಶ್ನೆಗಳು: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html">ಗೌಪ್ಯತಾ ನೀತಿ</a></p>
+    <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">ಗೌಪ್ಯತಾ ನೀತಿ</a> · <a href="terms.html">ಬಳಕೆಯ ನಿಯಮಗಳು</a> · <a href="../">ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳು</a></footer>
+  </article>
+  <article lang="mr" data-lang="mr" data-title="तुमचे Ganakah खाते हटवा" hidden>
+    <h1>तुमचे Ganakah खाते हटवा</h1>
+    <p class="meta">Saraswathy Tax Edge Advisory LLP चे Ganakah · अद्ययावत: 23 नोव्हेंबर 2026</p>
+
+    <p>Ganakah मध्ये साइन इन करणे ऐच्छिक आहे. तुम्ही खाते तयार केले असल्यास, ते तुम्ही कधीही खालीलपैकी कोणत्याही एका पद्धतीने हटवू शकता.</p>
+
+    <h2>अ‍ॅपमधून</h2>
+    <ol>
+      <li>Ganakah उघडा आणि <strong>☰</strong> (वर उजवीकडे) वर टॅप करा.</li>
+      <li><strong>प्रोफाइल</strong> उघडण्यासाठी वरच्या बाजूला असलेल्या तुमच्या नावावर किंवा ईमेलवर टॅप करा.</li>
+      <li><strong>खाते हटवा</strong> वर टॅप करा.</li>
+      <li>खात्री करण्यासाठी <strong>DELETE</strong> टाइप करा आणि <strong>खाते हटवा</strong> वर टॅप करा.</li>
+    </ol>
+    <p>तुम्ही <strong>"या फोनवरील डेटाही पुसा"</strong> यावरही खूण केल्यास, त्या फोनवरील अ‍ॅपचा डेटा (टिपा, कामे, स्मरणपत्रे, अकाउंट्स, स्कॅन, तिजोरी, इतिहास) देखील पुसला जातो. खूण न केल्यास तो तुमच्या फोनवरच राहतो.</p>
+
+    <h2>अ‍ॅपशिवाय</h2>
+    <p><strong>तुमच्या खात्याच्या ईमेल पत्त्यावरून</strong> <a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a> वर <strong>"Delete my Ganakah account"</strong> या विषयासह ईमेल पाठवा. खात्री करण्यासाठी आम्ही तुम्हाला त्याच पत्त्यावरून उत्तर देण्यास सांगू शकतो. आम्ही 30 दिवसांच्या आत खाते हटवतो आणि ते पूर्ण झाल्यावर तुम्हाला ईमेलद्वारे कळवतो.</p>
+
+    <h2>काय हटवले जाते</h2>
+    <ul>
+      <li>तुमचा ईमेल पत्ता, तुमचे नाव (तुम्ही जोडले असल्यास) आणि तुमच्या साइन-इनच्या वेळा. खात्यात एवढेच असते.</li>
+      <li>अ‍ॅपमधून हटवल्यास हे सर्व आमच्या सर्व्हरवरून त्वरित हटवले जाते आणि त्या फोनवर तुम्ही साइन आउट होता (आमच्या सर्व्हरच्या आपोआप बॅकअप प्रती 30 दिवसांच्या आत बदलल्या जातात).</li>
+      <li>ईमेल सेवा (MSG91) कोड ईमेलच्या वितरणाची नोंद तिच्या स्वतःच्या साठवण धोरणानुसार ठेवते; तुम्ही तुमचे खाते हटवता तेव्हा, आम्ही MSG91 ला त्या नोंदीतून तुमचा ईमेल पत्ता काढून टाकण्यास सांगतो.</li>
+      <li>त्यानंतर आम्ही काहीही ठेवत नाही. नंतर तुम्ही त्याच ईमेलने पुन्हा साइन इन केल्यास, एक नवीन, रिकामे खाते तयार होते.</li>
+    </ul>
+
+    <h2>कशावर परिणाम होत नाही</h2>
+    <ul>
+      <li>तुमचा अ‍ॅपमधील डेटा कधीही आमच्या सर्व्हरवर नव्हता: तुम्ही "या फोनवरील डेटाही पुसा" यावर खूण केल्याशिवाय किंवा अ‍ॅप अनइन्स्टॉल केल्याशिवाय तो तुमच्या फोनवरच राहतो.</li>
+      <li>तुमच्या स्वतःच्या Google Drive मधील किंवा इतरत्र असलेले बॅकअप तुमचे आहेत आणि ते हटवले जात नाहीत. आपोआप Google Drive बॅकअप काढून टाकण्यासाठी, Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data उघडा.</li>
+    </ul>
+
+    <p>प्रश्न: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html">गोपनीयता धोरण</a></p>
+    <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">गोपनीयता धोरण</a> · <a href="terms.html">वापराच्या अटी</a> · <a href="../">सर्व अ‍ॅप्स</a></footer>
+  </article>
+  <article lang="gu" data-lang="gu" data-title="તમારું Ganakah એકાઉન્ટ કાઢી નાખો" hidden>
+    <h1>તમારું Ganakah એકાઉન્ટ કાઢી નાખો</h1>
+    <p class="meta">Saraswathy Tax Edge Advisory LLP દ્વારા Ganakah · અપડેટ: 23 નવેમ્બર 2026</p>
+
+    <p>Ganakah માં સાઇન ઇન કરવું વૈકલ્પિક છે. જો તમે એકાઉન્ટ બનાવ્યું હોય, તો તમે નીચેની બેમાંથી કોઈ પણ એક રીતે તેને ગમે ત્યારે કાઢી નાખી શકો છો.</p>
+
+    <h2>એપમાં</h2>
+    <ol>
+      <li>Ganakah ખોલો અને <strong>☰</strong> (ઉપર જમણે) પર ટૅપ કરો.</li>
+      <li><strong>પ્રોફાઇલ</strong> ખોલવા માટે ઉપર તમારા નામ અથવા ઇમેઇલ પર ટૅપ કરો.</li>
+      <li><strong>એકાઉન્ટ કાઢી નાખો</strong> પર ટૅપ કરો.</li>
+      <li>પુષ્ટિ કરવા માટે <strong>DELETE</strong> લખો, અને <strong>એકાઉન્ટ કાઢી નાખો</strong> પર ટૅપ કરો.</li>
+    </ol>
+    <p>જો તમે <strong>"આ ફોનનો ડેટા પણ ભૂંસો"</strong> પર પણ ટિક કરો, તો તે ફોન પરનો એપનો ડેટા (નોંધો, કામો, રિમાઇન્ડર, એકાઉન્ટ્સ, સ્કૅન, તિજોરી, ઇતિહાસ) પણ ભૂંસાઈ જાય છે. ટિક ન કરો તો તે તમારા ફોન પર જ રહે છે.</p>
+
+    <h2>એપ વિના</h2>
+    <p><strong>તમારા એકાઉન્ટના ઇમેઇલ સરનામા પરથી</strong> <a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a> પર <strong>"Delete my Ganakah account"</strong> વિષય સાથે ઇમેઇલ મોકલો. અમે તમને તે જ સરનામા પરથી જવાબ આપીને પુષ્ટિ કરવા કહી શકીએ છીએ. અમે 30 દિવસની અંદર એકાઉન્ટ કાઢી નાખીએ છીએ અને કામ પૂરું થાય ત્યારે તમને ઇમેઇલથી જાણ કરીએ છીએ.</p>
+
+    <h2>શું કાઢી નાખવામાં આવે છે</h2>
+    <ul>
+      <li>તમારું ઇમેઇલ સરનામું, તમારું નામ (જો તમે ઉમેર્યું હોય) અને તમારા સાઇન-ઇનના સમય. એકાઉન્ટમાં આટલું જ હોય છે.</li>
+      <li>એપમાંથી કાઢી નાખવાથી તે અમારા સર્વર પરથી તરત જ કાઢી નાખવામાં આવે છે અને તે ફોન પર તમે સાઇન આઉટ થઈ જાઓ છો (અમારા સર્વરની આપમેળે બનતી બૅકઅપ નકલો 30 દિવસની અંદર બદલાઈ જાય છે).</li>
+      <li>ઇમેઇલ સેવા (MSG91) કોડ ઇમેઇલની ડિલિવરીનો લોગ પોતાની સંગ્રહ નીતિ મુજબ રાખે છે; તમે તમારું એકાઉન્ટ કાઢી નાખો ત્યારે અમે MSG91 ને તેમાંથી તમારું ઇમેઇલ સરનામું દૂર કરવા કહીએ છીએ.</li>
+      <li>ત્યાર બાદ અમે કંઈ જ રાખતા નથી. જો તમે પછીથી એ જ ઇમેઇલથી ફરી સાઇન ઇન કરો, તો નવું, ખાલી એકાઉન્ટ બને છે.</li>
+    </ul>
+
+    <h2>શું અસર પામતું નથી</h2>
+    <ul>
+      <li>તમારો એપ ડેટા ક્યારેય અમારા સર્વર પર હતો જ નહીં: જ્યાં સુધી તમે "આ ફોનનો ડેટા પણ ભૂંસો" પર ટિક ન કરો અથવા એપ અનઇન્સ્ટોલ ન કરો, ત્યાં સુધી તે તમારા ફોન પર જ રહે છે.</li>
+      <li>તમારા પોતાના Google Drive માં કે અન્યત્ર રાખેલા બૅકઅપ તમારા છે અને તે કાઢી નાખવામાં આવતા નથી. આપમેળે બનેલા Google Drive બૅકઅપ દૂર કરવા માટે Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data ખોલો.</li>
+    </ul>
+
+    <p>પ્રશ્નો: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html">ગોપનીયતા નીતિ</a></p>
+    <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">ગોપનીયતા નીતિ</a> · <a href="terms.html">ઉપયોગની શરતો</a> · <a href="../">બધી એપ્સ</a></footer>
+  </article>
+  <article lang="or" data-lang="or" data-title="ଆପଣଙ୍କ Ganakah ଆକାଉଣ୍ଟ ବିଲୋପ କରନ୍ତୁ" hidden>
+    <h1>ଆପଣଙ୍କ Ganakah ଆକାଉଣ୍ଟ ବିଲୋପ କରନ୍ତୁ</h1>
+    <p class="meta">Saraswathy Tax Edge Advisory LLP ଙ୍କ Ganakah · ଅଦ୍ୟତନ: 23 ନଭେମ୍ବର 2026</p>
+
+    <p>Ganakah ରେ ସାଇନ୍ ଇନ୍ କରିବା ଇଚ୍ଛାଧୀନ। ଯଦି ଆପଣ ଆକାଉଣ୍ଟ ତିଆରି କରିଛନ୍ତି, ତେବେ ଯେକୌଣସି ସମୟରେ ଏହି ଦୁଇଟି ଉପାୟ ମଧ୍ୟରୁ ଯେକୌଣସି ଗୋଟିଏରେ ଏହାକୁ ବିଲୋପ କରିପାରିବେ।</p>
+
+    <h2>ଆପ୍‌ରେ</h2>
+    <ol>
+      <li>Ganakah ଖୋଲନ୍ତୁ ଏବଂ <strong>☰</strong> (ଉପର ଡାହାଣ) ଟ୍ୟାପ୍ କରନ୍ତୁ।</li>
+      <li><strong>ପ୍ରୋଫାଇଲ୍</strong> ଖୋଲିବା ପାଇଁ ଉପରେ ଥିବା ଆପଣଙ୍କ ନାମ କିମ୍ବା ଇମେଲ୍ ଟ୍ୟାପ୍ କରନ୍ତୁ।</li>
+      <li><strong>ଆକାଉଣ୍ଟ ବିଲୋପ କରନ୍ତୁ</strong> ଟ୍ୟାପ୍ କରନ୍ତୁ।</li>
+      <li>ନିଶ୍ଚିତ କରିବା ପାଇଁ <strong>DELETE</strong> ଟାଇପ୍ କରନ୍ତୁ, ଏବଂ <strong>ଆକାଉଣ୍ଟ ବିଲୋପ କରନ୍ତୁ</strong> ଟ୍ୟାପ୍ କରନ୍ତୁ।</li>
+    </ol>
+    <p>ଯଦି ଆପଣ <strong>"ଏହି ଫୋନ୍‌ର ଡାଟା ମଧ୍ୟ ଲିଭାନ୍ତୁ"</strong> ମଧ୍ୟ ଟିକ୍ କରନ୍ତି, ତେବେ ସେହି ଫୋନ୍‌ରେ ଥିବା ଆପ୍‌ର ଡାଟା (ଟିପ୍ପଣୀ, କାମ, ସ୍ମାରକ, ହିସାବ, ସ୍କାନ୍, ସିନ୍ଦୁକ, ଇତିହାସ) ମଧ୍ୟ ଲିଭିଯିବ। ଟିକ୍ ନକଲେ ଏହା ଆପଣଙ୍କ ଫୋନ୍‌ରେ ରହିବ।</p>
+
+    <h2>ଆପ୍ ବିନା</h2>
+    <p><a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a> କୁ <strong>ଆପଣଙ୍କ ଆକାଉଣ୍ଟର ଇମେଲ୍ ଠିକଣାରୁ</strong> <strong>"Delete my Ganakah account"</strong> ବିଷୟ ସହ ଏକ ଇମେଲ୍ ପଠାନ୍ତୁ। ସେହି ଠିକଣାରୁ ଉତ୍ତର ଦେଇ ନିଶ୍ଚିତ କରିବାକୁ ଆମେ ଆପଣଙ୍କୁ କହିପାରୁ। ଆମେ 30 ଦିନ ମଧ୍ୟରେ ଆକାଉଣ୍ଟ ବିଲୋପ କରୁ ଏବଂ ସମ୍ପୂର୍ଣ୍ଣ ହେଲେ ଇମେଲ୍ ଦ୍ୱାରା ଆପଣଙ୍କୁ ଜଣାଉ।</p>
+
+    <h2>କ'ଣ ବିଲୋପ ହୁଏ</h2>
+    <ul>
+      <li>ଆପଣଙ୍କ ଇମେଲ୍ ଠିକଣା, ଆପଣଙ୍କ ନାମ (ଯଦି ଆପଣ ଯୋଡ଼ିଥିଲେ) ଏବଂ ଆପଣଙ୍କ ସାଇନ୍ ଇନ୍ ସମୟ। ଆକାଉଣ୍ଟରେ ଏତିକି ହିଁ ଥାଏ।</li>
+      <li>ଆପ୍‌ରେ ବିଲୋପ କଲେ ସେଗୁଡ଼ିକ ତୁରନ୍ତ ଆମ ସର୍ଭରରୁ ବିଲୋପ ହୁଏ ଏବଂ ସେହି ଫୋନ୍‌ରେ ଆପଣ ସାଇନ୍ ଆଉଟ୍ ହୋଇଯାଆନ୍ତି (ଆମ ସର୍ଭରର ସ୍ୱୟଂଚାଳିତ ବ୍ୟାକଅପ୍ କପିଗୁଡ଼ିକ 30 ଦିନ ମଧ୍ୟରେ ବଦଳିଯାଏ)।</li>
+      <li>ଇମେଲ୍ ସେବା (MSG91) ନିଜ ସଂରକ୍ଷଣ ନୀତି ଅନୁଯାୟୀ କୋଡ୍ ଇମେଲ୍‌ଗୁଡ଼ିକର ଏକ ବିତରଣ ଲଗ୍ ରଖେ; ଆପଣ ଆକାଉଣ୍ଟ ବିଲୋପ କଲେ, ଆମେ MSG91 କୁ ସେଥିରୁ ଆପଣଙ୍କ ଇମେଲ୍ ଠିକଣା ହଟାଇବାକୁ କହୁ।</li>
+      <li>ଏହା ପରେ ଆମେ କିଛି ରଖୁ ନାହିଁ। ପରେ ଯଦି ଆପଣ ସେହି ଇମେଲ୍ ସହ ପୁଣି ସାଇନ୍ ଇନ୍ କରନ୍ତି, ତେବେ ଏକ ନୂଆ, ଖାଲି ଆକାଉଣ୍ଟ ତିଆରି ହୁଏ।</li>
+    </ul>
+
+    <h2>କ'ଣ ପ୍ରଭାବିତ ହୁଏ ନାହିଁ</h2>
+    <ul>
+      <li>ଆପଣଙ୍କ ଆପ୍ ଡାଟା କେବେ ଆମ ସର୍ଭରରେ ନଥିଲା: ଆପଣ "ଏହି ଫୋନ୍‌ର ଡାଟା ମଧ୍ୟ ଲିଭାନ୍ତୁ" ଟିକ୍ ନକରିବା କିମ୍ବା ଆପ୍ ଅନଇନଷ୍ଟଲ୍ ନକରିବା ପର୍ଯ୍ୟନ୍ତ ଏହା ଆପଣଙ୍କ ଫୋନ୍‌ରେ ରହେ।</li>
+      <li>ଆପଣଙ୍କ ନିଜ Google Drive କିମ୍ବା ଅନ୍ୟତ୍ର ଥିବା ବ୍ୟାକଅପ୍ ଆପଣଙ୍କର ଏବଂ ବିଲୋପ ହୁଏ ନାହିଁ। ସ୍ୱୟଂଚାଳିତ Google Drive ବ୍ୟାକଅପ୍ ହଟାଇବା ପାଇଁ, Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data ଖୋଲନ୍ତୁ।</li>
+    </ul>
+
+    <p>ପ୍ରଶ୍ନ: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html">ଗୋପନୀୟତା ନୀତି</a></p>
+    <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">ଗୋପନୀୟତା ନୀତି</a> · <a href="terms.html">ବ୍ୟବହାର ସର୍ତ୍ତାବଳୀ</a> · <a href="../">ସମସ୍ତ ଆପ୍</a></footer>
+  </article>
+  <article lang="bn" data-lang="bn" data-title="আপনার Ganakah অ্যাকাউন্ট মুছুন" hidden>
+    <h1>আপনার Ganakah অ্যাকাউন্ট মুছুন</h1>
+    <p class="meta">Saraswathy Tax Edge Advisory LLP-এর Ganakah · হালনাগাদ: 23 নভেম্বর 2026</p>
+
+    <p>Ganakah-এ সাইন ইন করা ঐচ্ছিক। আপনি অ্যাকাউন্ট খুলে থাকলে, নিচের দুটি উপায়ের যেকোনো একটিতে যেকোনো সময় তা মুছতে পারেন।</p>
+
+    <h2>অ্যাপে</h2>
+    <ol>
+      <li>Ganakah খুলুন এবং <strong>☰</strong> (উপরে ডানদিকে) ট্যাপ করুন।</li>
+      <li><strong>প্রোফাইল</strong> খুলতে উপরে আপনার নাম বা ইমেলে ট্যাপ করুন।</li>
+      <li><strong>অ্যাকাউন্ট মুছুন</strong> ট্যাপ করুন।</li>
+      <li>নিশ্চিত করতে <strong>DELETE</strong> টাইপ করুন, তারপর <strong>অ্যাকাউন্ট মুছুন</strong> ট্যাপ করুন।</li>
+    </ol>
+    <p>আপনি <strong>"এই ফোনের ডেটাও মুছুন"</strong>-এও টিক দিলে, সেই ফোনে থাকা অ্যাপের ডেটাও (নোট, কাজ, রিমাইন্ডার, হিসাব, স্ক্যান, সিন্দুক, ইতিহাস) মুছে যাবে। টিক না দিলে তা আপনার ফোনেই থাকবে।</p>
+
+    <h2>অ্যাপ ছাড়া</h2>
+    <p><a href="mailto:support@saraswathytaxedge.com?subject=Delete%20my%20Ganakah%20account">support@saraswathytaxedge.com</a>-এ <strong>আপনার অ্যাকাউন্টের ইমেল ঠিকানা থেকে</strong> একটি ইমেল পাঠান, যার বিষয় হবে <strong>"Delete my Ganakah account"</strong>। নিশ্চিত করার জন্য আমরা আপনাকে সেই ঠিকানা থেকে উত্তর দিতে বলতে পারি। আমরা 30 দিনের মধ্যে অ্যাকাউন্টটি মুছে দিই এবং কাজ শেষ হলে ইমেলে আপনাকে জানাই।</p>
+
+    <h2>কী মুছে ফেলা হয়</h2>
+    <ul>
+      <li>আপনার ইমেল ঠিকানা, আপনার নাম (যদি যোগ করে থাকেন) এবং আপনার সাইন ইনের সময়। অ্যাকাউন্টে এর বেশি কিছুই থাকে না।</li>
+      <li>অ্যাপে মুছলে এগুলি আমাদের সার্ভার থেকে সঙ্গে সঙ্গে মুছে যায় এবং সেই ফোনে আপনি সাইন আউট হয়ে যান (আমাদের সার্ভারের স্বয়ংক্রিয় ব্যাকআপ কপিগুলি 30 দিনের মধ্যে নতুন কপিতে বদলে যায়)।</li>
+      <li>ইমেল পরিষেবা (MSG91) কোড ইমেলগুলির একটি ডেলিভারি লগ নিজস্ব সংরক্ষণ নীতি অনুযায়ী রাখে; আপনি অ্যাকাউন্ট মুছলে, আমরা MSG91-কে সেখান থেকে আপনার ইমেল ঠিকানা সরিয়ে দিতে বলি।</li>
+      <li>এরপর আমরা কিছুই রাখি না। পরে একই ইমেল দিয়ে আবার সাইন ইন করলে একটি নতুন, খালি অ্যাকাউন্ট তৈরি হয়।</li>
+    </ul>
+
+    <h2>কীসে প্রভাব পড়ে না</h2>
+    <ul>
+      <li>আপনার অ্যাপের ডেটা কখনও আমাদের সার্ভারে ছিল না: আপনি "এই ফোনের ডেটাও মুছুন"-এ টিক না দিলে বা অ্যাপ আনইনস্টল না করলে তা আপনার ফোনেই থাকে।</li>
+      <li>আপনার নিজের Google Drive বা অন্য কোথাও থাকা ব্যাকআপ আপনার, সেগুলি মোছা হয় না। স্বয়ংক্রিয় Google Drive ব্যাকআপ সরাতে Google Drive → Settings → Manage apps → Ganakah → Delete hidden app data খুলুন।</li>
+    </ul>
+
+    <p>প্রশ্ন: <a href="mailto:support@saraswathytaxedge.com">support@saraswathytaxedge.com</a> · <a href="privacy.html">গোপনীয়তা নীতি</a></p>
+    <footer>© 2026 Saraswathy Tax Edge Advisory LLP · <a href="privacy.html">গোপনীয়তা নীতি</a> · <a href="terms.html">ব্যবহারের শর্তাবলি</a> · <a href="../">সব অ্যাপ</a></footer>
+  </article>
 </main>
+<script>
+(function () {
+  var NAMES = { en: 'English', ta: 'தமிழ்', hi: 'हिन्दी', te: 'తెలుగు', ml: 'മലയാളം', kn: 'ಕನ್ನಡ', mr: 'मराठी', gu: 'ગુજરાતી', or: 'ଓଡ଼ିଆ', bn: 'বাংলা' };
+  var KEY = 'ganakah.site.lang';
+  var arts = [].slice.call(document.querySelectorAll('article[data-lang]'));
+  var menu = document.getElementById('lang'), btn = document.getElementById('lang-btn'), list = document.getElementById('lang-list');
+  var items = [].slice.call(list.querySelectorAll('button[data-lang]'));
+  var cur = 'en';
+  function ok(l) { return Object.prototype.hasOwnProperty.call(NAMES, l); }
+  function first() {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+    if (q && ok(q)) return q;
+    var h = location.hash.slice(1);
+    if (h && ok(h)) return h; // old links such as privacy.html#ta
+    try { var s = localStorage.getItem(KEY); if (s && ok(s)) return s; } catch (e) {}
+    return 'en';
+  }
+  // Links to the other pages carry the language; #parts of a translation point at its own ids (ta-account…).
+  function relink(l) {
+    [].forEach.call(document.querySelectorAll('article a[href]'), function (a) {
+      var h = a.getAttribute('data-href');
+      if (h === null) { h = a.getAttribute('href'); a.setAttribute('data-href', h); }
+      if (/^(https?:|mailto:|#)/.test(h)) return;
+      var i = h.indexOf('#'), base = i < 0 ? h : h.slice(0, i), hash = i < 0 ? '' : h.slice(i);
+      a.setAttribute('href', base + (base.indexOf('?') < 0 ? '?' : '&') + 'lang=' + l + hash);
+    });
+  }
+  function target(id) { return (cur !== 'en' && document.getElementById(cur + '-' + id)) || document.getElementById(id); }
+  function jump() {
+    var id = location.hash.slice(1);
+    if (!id || ok(id)) return;
+    var el = target(decodeURIComponent(id));
+    if (el) el.scrollIntoView();
+  }
+  function show(l, save) {
+    cur = l;
+    arts.forEach(function (a) { a.hidden = a.getAttribute('data-lang') !== l; });
+    document.documentElement.lang = l;
+    var a = document.querySelector('article[data-lang="' + l + '"]');
+    if (a && a.getAttribute('data-title')) document.title = a.getAttribute('data-title');
+    document.getElementById('lang-name').textContent = NAMES[l];
+    items.forEach(function (b) { b.setAttribute('aria-checked', b.getAttribute('data-lang') === l ? 'true' : 'false'); });
+    relink(l);
+    if (save) {
+      try { localStorage.setItem(KEY, l); } catch (e) {}
+      try {
+        var u = new URL(location.href);
+        u.searchParams.set('lang', l);
+        if (ok(u.hash.slice(1))) u.hash = '';
+        history.replaceState(null, '', u.toString());
+      } catch (e) {}
+    }
+  }
+  function open(on) {
+    list.hidden = !on;
+    btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+    if (on) { var c = list.querySelector('[aria-checked="true"]') || items[0]; c.focus(); }
+  }
+  btn.addEventListener('click', function () { open(list.hidden); });
+  items.forEach(function (b, i) {
+    b.addEventListener('click', function () { show(b.getAttribute('data-lang'), true); open(false); btn.focus(); });
+    b.addEventListener('keydown', function (e) {
+      var k = e.key, n = null;
+      if (k === 'ArrowDown') n = items[(i + 1) % items.length];
+      else if (k === 'ArrowUp') n = items[(i - 1 + items.length) % items.length];
+      else if (k === 'Home') n = items[0];
+      else if (k === 'End') n = items[items.length - 1];
+      else if (k === 'Escape') { e.preventDefault(); open(false); btn.focus(); return; }
+      else if (k === 'Tab') { open(false); return; }
+      if (n) { e.preventDefault(); n.focus(); }
+    });
+  });
+  btn.addEventListener('keydown', function (e) { if (e.key === 'ArrowDown') { e.preventDefault(); open(true); } });
+  document.addEventListener('click', function (e) { if (!menu.contains(e.target)) open(false); });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('article a[href^="#"]');
+    if (!a) return;
+    var el = target(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    try { history.replaceState(null, '', a.getAttribute('href')); } catch (x) {}
+    el.scrollIntoView();
+  });
+  window.addEventListener('hashchange', jump);
+  menu.hidden = false;
+  show(first(), false);
+  jump();
+})();
+</script>
 </body>
 </html>
