@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "published": "2026-11-17",
+  "version": 2,
+  "published": "2026-11-24",
   "items": [
     {
       "id": "gstr1-monthly",
@@ -214,8 +214,8 @@
       "applies": ["pfEsi"],
       "rule": { "freq": "monthly", "start": "2026-01-15", "day": 15 },
       "holidayShift": "previous",
-      "source": "https://www.epfindia.gov.in/site_docs/PDFs/MiscPDFs/Employer_Information_Booklet.pdf",
-      "checkedOn": "2026-11-17"
+      "source": "https://egazette.gov.in/WriteReadData/2026/273957.pdf",
+      "checkedOn": "2026-11-24"
     },
     {
       "id": "esi",

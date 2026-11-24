@@ -1,0 +1,685 @@
+{
+  "version": 1,
+  "published": "2026-11-24",
+  "items": [
+    {
+      "id": "it-act-2025",
+      "group": "incomeTax",
+      "name": "Income Tax Department – Income-tax Act, 2025",
+      "title": "The Income-tax Act, 2025 (tax slabs and rates, HRA exemption, capital gains, deductions)",
+      "url": "https://www.incometax.gov.in/iec/foportal/newdownloads/income-tax-act-2025",
+      "listingUrl": "https://www.incometax.gov.in/iec/foportal/downloads",
+      "usedFor": [
+        "incomeTax",
+        "capitalGains",
+        "hra",
+        "salary"
+      ]
+    },
+    {
+      "id": "it-slabs",
+      "group": "incomeTax",
+      "name": "Income Tax Department – tax slabs",
+      "title": "Salaried Individuals: tax slabs, old and new regime (incometax.gov.in help page)",
+      "url": "https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-1#taxslabs",
+      "listingUrl": "https://www.incometax.gov.in/iec/foportal/help",
+      "usedFor": [
+        "incomeTax",
+        "salary"
+      ]
+    },
+    {
+      "id": "it-rules-2026",
+      "group": "incomeTax",
+      "name": "Income Tax Department – Income-tax Rules, 2026",
+      "title": "Income-tax Rules, 2026 (in force from 01-04-2026; PAN for cash deposits of ₹10 lakh or more in a year)",
+      "number": "G.S.R. 198(E)",
+      "date": "2026-03-20",
+      "url": "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-03/En-Notified-IT-Rules-2026-20-03-2026.pdf",
+      "listingUrl": "https://www.incometax.gov.in/iec/foportal/downloads",
+      "usedFor": [
+        "incomeTax",
+        "cashCounter"
+      ]
+    },
+    {
+      "id": "it-circular-7-2026",
+      "group": "incomeTax",
+      "name": "CBDT Circular No. 07/2026",
+      "title": "Extension of timelines for filing of various reports of audit and ITRs for AY 2026-27",
+      "number": "Circular No. 07/2026, F.No. 225/128/2026/ITA-II",
+      "date": "2026-09-28",
+      "url": "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-09/Circular-7-2026.pdf",
+      "listingUrl": "https://www.incometax.gov.in/iec/foportal/",
+      "usedFor": [
+        "dueIncomeTax"
+      ]
+    },
+    {
+      "id": "it-itr-faq",
+      "group": "incomeTax",
+      "name": "Income Tax Department – ITR FAQs",
+      "title": "Income Tax Returns FAQs (return due dates)",
+      "url": "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/%20income%20tax%20returns-faq",
+      "listingUrl": "https://www.incometax.gov.in/iec/foportal/help",
+      "usedFor": [
+        "dueIncomeTax"
+      ]
+    },
+    {
+      "id": "it-tax-payments",
+      "group": "incomeTax",
+      "name": "Income Tax Department – Tax payments",
+      "title": "Tax Payments (advance tax instalments)",
+      "url": "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/tax-payments",
+      "listingUrl": "https://www.incometax.gov.in/iec/foportal/help",
+      "usedFor": [
+        "dueIncomeTax"
+      ]
+    },
+    {
+      "id": "it-tax-payments-faq",
+      "group": "incomeTax",
+      "name": "Income Tax Department – Tax payments FAQs",
+      "title": "Tax Payments FAQs (TDS payment dates)",
+      "url": "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/tax-payments-faq",
+      "listingUrl": "https://www.incometax.gov.in/iec/foportal/help",
+      "usedFor": [
+        "dueTds"
+      ]
+    },
+    {
+      "id": "it-form140",
+      "group": "incomeTax",
+      "name": "Income Tax Department – Form 140 user manual",
+      "title": "Form 140 User Manual (TDS quarterly statement due dates)",
+      "url": "https://www.incometax.gov.in/iec/foportal/newformpage/forms/form140-um",
+      "listingUrl": "https://www.incometax.gov.in/iec/foportal/downloads",
+      "usedFor": [
+        "dueTds"
+      ]
+    },
+    {
+      "id": "cbic-ctr-9-2025",
+      "group": "gst",
+      "name": "CBIC – Notification 9/2025-Central Tax (Rate)",
+      "title": "Rates of CGST on goods (Schedules I to VII), in force from 22-09-2025",
+      "number": "Notification No. 9/2025-Central Tax (Rate), G.S.R. 673(E)",
+      "date": "2025-09-17",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1010436/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn",
+        "gstRates"
+      ],
+      "notification": "9/2025"
+    },
+    {
+      "id": "cbic-ctr-10-2025",
+      "group": "gst",
+      "name": "CBIC – Notification 10/2025-Central Tax (Rate)",
+      "title": "Exemption (nil rate) for goods, in force from 22-09-2025",
+      "number": "Notification No. 10/2025-Central Tax (Rate), G.S.R. 674(E)",
+      "date": "2025-09-17",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1010437/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn"
+      ],
+      "notification": "10/2025"
+    },
+    {
+      "id": "cbic-ctr-11-2017",
+      "group": "gst",
+      "name": "CBIC – Notification 11/2017-Central Tax (Rate)",
+      "title": "Rates of CGST on services (as amended)",
+      "number": "Notification No. 11/2017-Central Tax (Rate)",
+      "date": "2017-06-28",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1000997/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn",
+        "homeLoan"
+      ],
+      "notification": "11/2017"
+    },
+    {
+      "id": "cbic-ctr-12-2017",
+      "group": "gst",
+      "name": "CBIC – Notification 12/2017-Central Tax (Rate)",
+      "title": "Exemption for services (as amended)",
+      "number": "Notification No. 12/2017-Central Tax (Rate)",
+      "date": "2017-06-28",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1000996/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn"
+      ],
+      "notification": "12/2017"
+    },
+    {
+      "id": "cbic-ctr-15-2025",
+      "group": "gst",
+      "name": "CBIC – Notification 15/2025-Central Tax (Rate)",
+      "title": "Amendment of Notification 11/2017-CT(R) (services rates), from 22-09-2025",
+      "number": "Notification No. 15/2025-Central Tax (Rate)",
+      "date": "2025-09-17",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1010453/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn"
+      ],
+      "notification": "15/2025"
+    },
+    {
+      "id": "cbic-ctr-19-2025",
+      "group": "gst",
+      "name": "CBIC – Notification 19/2025-Central Tax (Rate)",
+      "title": "Amendment of Notification 9/2025-CT(R), in force from 01-02-2026",
+      "number": "Notification No. 19/2025-Central Tax (Rate)",
+      "date": "2025-12-31",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1010534/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn"
+      ],
+      "notification": "19/2025"
+    },
+    {
+      "id": "cbic-ctr-1-2026",
+      "group": "gst",
+      "name": "CBIC – Notification 1/2026-Central Tax (Rate)",
+      "title": "Amendment of Notification 9/2025-CT(R) (Finance Act, 2026), in force from 01-05-2026",
+      "number": "Notification No. 1/2026-Central Tax (Rate)",
+      "date": "2026-04-30",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1010645/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn"
+      ],
+      "notification": "1/2026"
+    },
+    {
+      "id": "cbic-ctr-2-2026",
+      "group": "gst",
+      "name": "CBIC – Notification 2/2026-Central Tax (Rate)",
+      "title": "Amendment of Notification 9/2025-CT(R), in force from 01-11-2026",
+      "number": "Notification No. 2/2026-Central Tax (Rate)",
+      "date": "2026-10-27",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1010799/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn"
+      ],
+      "notification": "2/2026"
+    },
+    {
+      "id": "cbic-ctr-3-2026",
+      "group": "gst",
+      "name": "CBIC – Notification 3/2026-Central Tax (Rate)",
+      "title": "Amendment of Notification 10/2025-CT(R), in force from 01-11-2026",
+      "number": "Notification No. 3/2026-Central Tax (Rate)",
+      "date": "2026-10-27",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1010800/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn"
+      ],
+      "notification": "3/2026"
+    },
+    {
+      "id": "cbic-ctr-4-2026",
+      "group": "gst",
+      "name": "CBIC – Notification 4/2026-Central Tax (Rate)",
+      "title": "Amendment of Notification 4/2017-CT(R) (reverse charge on goods), in force from 01-11-2026",
+      "number": "Notification No. 4/2026-Central Tax (Rate)",
+      "date": "2026-10-27",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1010801/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn"
+      ],
+      "notification": "4/2026"
+    },
+    {
+      "id": "cbic-ctr-6-2026",
+      "group": "gst",
+      "name": "CBIC – Notification 6/2026-Central Tax (Rate)",
+      "title": "Amendment of Notification 11/2017-CT(R) (services rates), in force from 01-11-2026",
+      "number": "Notification No. 6/2026-Central Tax (Rate)",
+      "date": "2026-10-27",
+      "url": "https://taxinformation.cbic.gov.in/view-pdf/1010783/ENG/Notifications",
+      "listingUrl": "https://taxinformation.cbic.gov.in/content-page/explore-notification",
+      "usedFor": [
+        "hsn"
+      ],
+      "notification": "6/2026"
+    },
+    {
+      "id": "gst-rates-page",
+      "group": "gst",
+      "name": "CBIC – GST rates of goods and services",
+      "title": "GST Goods and Services Rates (cbic-gst.gov.in)",
+      "url": "https://cbic-gst.gov.in/gst-goods-services-rates.html",
+      "listingUrl": "https://cbic-gst.gov.in/",
+      "usedFor": [
+        "gstRates",
+        "hsn"
+      ]
+    },
+    {
+      "id": "cgst-rule-59",
+      "group": "gst",
+      "name": "CBIC – CGST Rules, rule 59",
+      "title": "Central Goods and Services Tax Rules, 2017, rule 59 (GSTR-1, IFF)",
+      "url": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter8/rule59_v1.00.html",
+      "listingUrl": "https://cbic-gst.gov.in/",
+      "usedFor": [
+        "dueGst"
+      ]
+    },
+    {
+      "id": "cgst-rule-61",
+      "group": "gst",
+      "name": "CBIC – CGST Rules, rule 61",
+      "title": "Central Goods and Services Tax Rules, 2017, rule 61 (GSTR-3B, PMT-06)",
+      "url": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter8/rule61_v1.00.html",
+      "listingUrl": "https://cbic-gst.gov.in/",
+      "usedFor": [
+        "dueGst"
+      ]
+    },
+    {
+      "id": "cgst-rule-80",
+      "group": "gst",
+      "name": "CBIC – CGST Rules, rule 80",
+      "title": "Central Goods and Services Tax Rules, 2017, rule 80 (GSTR-9 annual return)",
+      "url": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter8/rule80_v1.00.html",
+      "listingUrl": "https://cbic-gst.gov.in/",
+      "usedFor": [
+        "dueGst"
+      ]
+    },
+    {
+      "id": "gstn-gstr1",
+      "group": "gst",
+      "name": "GST portal – GSTR-1 user guide",
+      "title": "GSTR-1 FAQs and user manual (tutorial.gst.gov.in)",
+      "url": "https://tutorial.gst.gov.in/userguide/returns/GSTR_1.htm",
+      "listingUrl": "https://www.gst.gov.in/",
+      "usedFor": [
+        "dueGst"
+      ]
+    },
+    {
+      "id": "mca-llp-form11",
+      "group": "roc",
+      "name": "MCA – LLP Form 11",
+      "title": "LLP Form 11 annual return",
+      "url": "https://www.mca.gov.in/content/mca/global/en/mca/llp-e-filling/Form-11.html",
+      "listingUrl": "https://www.mca.gov.in/",
+      "usedFor": [
+        "dueRoc"
+      ]
+    },
+    {
+      "id": "mca-llp-form8",
+      "group": "roc",
+      "name": "MCA – LLP Form 8",
+      "title": "LLP Form 8 statement of account and solvency",
+      "url": "https://www.mca.gov.in/content/mca/global/en/mca/llp-e-filling/Form-8.html",
+      "listingUrl": "https://www.mca.gov.in/",
+      "usedFor": [
+        "dueRoc"
+      ]
+    },
+    {
+      "id": "pib-labour-codes",
+      "group": "labour",
+      "name": "PIB – Labour Codes in force",
+      "title": "Ministry of Labour & Employment: the four Labour Codes made effective (press release)",
+      "number": "PRID 2192463",
+      "date": "2025-11-21",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2192463",
+      "listingUrl": "https://www.pib.gov.in/allRel.aspx",
+      "usedFor": [
+        "salary"
+      ]
+    },
+    {
+      "id": "code-on-wages",
+      "group": "labour",
+      "name": "Gazette of India – Code on Wages, 2019",
+      "title": "The Code on Wages, 2019 (definition of wages, s.2(y), and the 50% rule)",
+      "number": "Act No. 29 of 2019",
+      "date": "2019-08-08",
+      "url": "https://egazette.gov.in/WriteReadData/2019/210356.pdf",
+      "listingUrl": "https://egazette.gov.in/",
+      "usedFor": [
+        "salary"
+      ]
+    },
+    {
+      "id": "code-social-security",
+      "group": "labour",
+      "name": "Gazette of India – Code on Social Security, 2020",
+      "title": "The Code on Social Security, 2020 (wages s.2(88), PF, gratuity s.53)",
+      "number": "Act No. 36 of 2020",
+      "date": "2020-09-29",
+      "url": "https://egazette.gov.in/WriteReadData/2020/222111.pdf",
+      "listingUrl": "https://egazette.gov.in/",
+      "usedFor": [
+        "salary",
+        "epf"
+      ]
+    },
+    {
+      "id": "so-5109e",
+      "group": "labour",
+      "name": "Gazette of India – S.O. 5109(E)",
+      "title": "EPF wage ceiling raised to ₹25,000 a month from 17-09-2026 (supersedes S.O. 2702(E) of 29-05-2026)",
+      "number": "S.O. 5109(E)",
+      "date": "2026-09-17",
+      "url": "https://egazette.gov.in/WriteReadData/2026/276299.pdf",
+      "listingUrl": "https://egazette.gov.in/",
+      "usedFor": [
+        "salary",
+        "epf"
+      ]
+    },
+    {
+      "id": "epfo-ceiling-circular",
+      "group": "labour",
+      "name": "EPFO – wage ceiling circular",
+      "title": "Enhancement of wage ceiling (EPFO circular with the text of S.O. 5109(E))",
+      "number": "No. Compliance/Enhancement of wage ceiling/2026/E-1345653",
+      "date": "2026-09-25",
+      "url": "https://pmvbry-cdn.epfindia.gov.in/wp-content/uploads/2026/09/Wage-Ceiling-Circular-28.09.2026.pdf",
+      "listingUrl": "https://www.epfo.gov.in/notices/wage-ceiling-circular-28-09-2026/",
+      "usedFor": [
+        "salary",
+        "epf"
+      ]
+    },
+    {
+      "id": "epfo-ceiling-faq",
+      "group": "labour",
+      "name": "EPFO – wage ceiling FAQs",
+      "title": "Revision of EPFO statutory wage ceiling from ₹15,000 to ₹25,000: FAQs (September 2026 split, contribution rates)",
+      "url": "https://pmvbry-cdn.epfindia.gov.in/wp-content/uploads/2026/09/EPFO_Wage_Ceiling_FAQs.pdf",
+      "listingUrl": "https://www.epfo.gov.in/",
+      "usedFor": [
+        "salary",
+        "epf"
+      ]
+    },
+    {
+      "id": "epfo-roi-2024-25",
+      "group": "labour",
+      "name": "EPFO – interest rate 2024-25",
+      "title": "Declaration of rate of interest (8.25%) for 2024-25",
+      "number": "No. INV-11/2/2021-INV/3557",
+      "date": "2025-05-26",
+      "url": "https://pmvbry-cdn.epfindia.gov.in/wp-content/uploads/2025/09/DeclarationOfROI_2024_25-1.pdf",
+      "listingUrl": "https://www.epfo.gov.in/circulars/",
+      "usedFor": [
+        "epf"
+      ]
+    },
+    {
+      "id": "epfo-contribution-rates",
+      "group": "labour",
+      "name": "EPFO – contribution rates",
+      "title": "Contribution rates: EPF 12%, EPS 8.33%, EDLI 0.5%, admin charges 0.5%",
+      "url": "https://www.epfo.gov.in/wp-content/themes/epfo-child/assets/pdfs/ContributionRate.pdf",
+      "listingUrl": "https://www.epfo.gov.in/employer-documents/",
+      "usedFor": [
+        "salary",
+        "epf"
+      ]
+    },
+    {
+      "id": "epf-scheme-2026",
+      "group": "labour",
+      "name": "Gazette of India – Employees' Provident Funds Scheme, 2026",
+      "title": "Employees' Provident Funds Scheme, 2026 (supersedes the EPF Scheme, 1952): para 28(3), contributions remitted within fifteen days of the close of every month",
+      "number": "G.S.R. 525(E)",
+      "date": "2026-06-29",
+      "url": "https://egazette.gov.in/WriteReadData/2026/273957.pdf",
+      "listingUrl": "https://www.epfo.gov.in/epf-scheme/",
+      "usedFor": [
+        "duePfEsi"
+      ]
+    },
+    {
+      "id": "esic-contribution",
+      "group": "labour",
+      "name": "ESIC – contribution",
+      "title": "ESIC contribution: employee 0.75%, employer 3.25% (from 01-07-2019), paid monthly",
+      "url": "https://esic.gov.in/contribution",
+      "listingUrl": "https://www.esic.gov.in/",
+      "usedFor": [
+        "salary",
+        "duePfEsi"
+      ]
+    },
+    {
+      "id": "dea-small-savings-q4-2023-24",
+      "group": "savings",
+      "name": "Department of Economic Affairs – small savings rates (rate table)",
+      "title": "Revision of interest rates for Small Savings Schemes, Q4 FY 2023-24 (01-01-2024 to 31-03-2024): PPF 7.1%, Sukanya Samriddhi 8.2% — the last O.M. with the rate table; later O.M.s keep the rates unchanged",
+      "number": "O.M. F.No.1/4/2019-NS",
+      "date": "2023-12-29",
+      "url": "https://dea.gov.in/files/budget_division_documents/Q4_2023_24.pdf",
+      "listingUrl": "https://dea.gov.in/budget-division/revision-interest-rates-small-saving-schemes-q4-2023-24",
+      "usedFor": [
+        "ppf",
+        "ssy"
+      ]
+    },
+    {
+      "id": "dea-small-savings-q3-2026-27",
+      "group": "savings",
+      "name": "Department of Economic Affairs – small savings rates",
+      "title": "Revision of interest rates for Small Savings Schemes, Q3 FY 2026-27 (01-10-2026 to 31-12-2026): rates remain unchanged",
+      "number": "O.M. F.No.1/4/2019-NS",
+      "date": "2026-09-30",
+      "url": "https://dea.gov.in/files/budget_division_documents/R.pdf",
+      "listingUrl": "https://dea.gov.in/budget-division/revision-interest-rates-small-savings-schemes-q3-2026-27",
+      "usedFor": [
+        "ppf",
+        "ssy"
+      ]
+    },
+    {
+      "id": "dea-small-savings-list",
+      "group": "savings",
+      "name": "Department of Economic Affairs – Small Savings",
+      "title": "Small Savings: orders on interest rates (list)",
+      "url": "https://dea.gov.in/taxonomy/term/475",
+      "listingUrl": "https://dea.gov.in/",
+      "usedFor": [
+        "ppf",
+        "ssy"
+      ]
+    },
+    {
+      "id": "pfrda-exits-2025",
+      "group": "savings",
+      "name": "PFRDA – NPS exits and withdrawals",
+      "title": "PFRDA (Exits and Withdrawals under the National Pension System) (Amendment) Regulations, 2025",
+      "number": "F. No. PFRDA/16/14/06/0009/2018-REG-EXIT",
+      "date": "2025-12-12",
+      "url": "https://pfrda.org.in/documents/33652/184762/Gazette+PFRDA+Exit+and+Withdrawals+under+the+NPS+Amendment+Regulations+2025.pdf",
+      "listingUrl": "https://pfrda.org.in/web/pfrda/regulatory-framework/regulations",
+      "usedFor": [
+        "nps"
+      ]
+    },
+    {
+      "id": "gcc-pt",
+      "group": "state",
+      "name": "Greater Chennai Corporation – profession tax",
+      "title": "Profession tax half-yearly rates (from the II half-year 2024-25) and payment dates: press release",
+      "number": "R.D. PT C.No/3555/2026",
+      "date": "2026-08-04",
+      "url": "https://chennaicorporation.gov.in/gcc/pdf/PT_Press_Release.pdf",
+      "listingUrl": "https://chennaicorporation.gov.in/gcc/department/revenue/",
+      "usedFor": [
+        "salary",
+        "duePt"
+      ]
+    },
+    {
+      "id": "tn-urban-pt",
+      "group": "state",
+      "name": "TN Urban e-Pay – profession tax",
+      "title": "Tax on Profession, Trade, Calling and Employment – Basic Information",
+      "url": "https://tnurbanepay.tn.gov.in/ProfessionalTax.pdf",
+      "listingUrl": "https://tnurbanepay.tn.gov.in/",
+      "usedFor": [
+        "salary"
+      ]
+    },
+    {
+      "id": "tn-lwf-go-161",
+      "group": "state",
+      "name": "Government of Tamil Nadu – Labour Welfare Fund contribution (G.O.)",
+      "title": "Tamil Nadu Labour Welfare Fund: rate of contribution raised to ₹20 a year (employee) and ₹40 a year (employer)",
+      "number": "G.O. Ms. No. 161, Labour Welfare and Skill Development (G2) Department",
+      "date": "2022-12-02",
+      "url": "https://lwb.tn.gov.in/uploads/labo_205/subpage_files/GO_161.pdf",
+      "listingUrl": "https://labour.tn.gov.in/tnlabour_welfarefund.php",
+      "usedFor": [
+        "salary"
+      ]
+    },
+    {
+      "id": "tn-lwf-gazette-538",
+      "group": "state",
+      "name": "Tamil Nadu Government Gazette – Labour Welfare Fund rules amendment",
+      "title": "Amendment of rule 11-A: employee contribution ₹20 and employer contribution ₹40 a year",
+      "number": "Tamil Nadu Government Gazette Extraordinary No. 538",
+      "date": "2022-12-02",
+      "url": "https://lwb.tn.gov.in/uploads/labo_205/subpage_files/Gazette_538.pdf",
+      "listingUrl": "https://labour.tn.gov.in/tnlabour_welfarefund.php",
+      "usedFor": [
+        "salary"
+      ]
+    },
+    {
+      "id": "dopt-holidays-2026",
+      "group": "holidays",
+      "name": "DoPT – Central Government holidays 2026",
+      "title": "Holidays to be observed in Central Government Offices during the year 2026",
+      "number": "O.M. F.No.12/2/2023-JCA",
+      "date": "2025-07-03",
+      "url": "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf",
+      "listingUrl": "https://dopt.gov.in/",
+      "usedFor": [
+        "holidaysCentral"
+      ]
+    },
+    {
+      "id": "dopt-bakrid-2026",
+      "group": "holidays",
+      "name": "DoPT – change of the Id-ul-Zuha holiday 2026",
+      "title": "Change in the date of holiday on account of Id-ul-Zuha (Bakrid)",
+      "number": "O.M. F.No.12/3/2023-JCA",
+      "date": "2026-05-22",
+      "url": "https://documents.doptcirculars.nic.in/D2/D02est/Change%20in%20the%20date%20of%20holiday%20of%20Id-ul-Zuhamg709.PDF",
+      "listingUrl": "https://dopt.gov.in/",
+      "usedFor": [
+        "holidaysCentral"
+      ]
+    },
+    {
+      "id": "dopt-holidays-2027",
+      "group": "holidays",
+      "name": "DoPT – Central Government holidays 2027",
+      "title": "Holidays to be observed in Central Government Offices during the year 2027",
+      "number": "O.M. F.No.12/2/2023-JCA",
+      "date": "2026-07-16",
+      "url": "https://dopt.gov.in/static/uploads/2026/08/2ffd159748162a48c025f7e6ca5807d5.pdf",
+      "listingUrl": "https://dopt.gov.in/",
+      "usedFor": [
+        "holidaysCentral"
+      ]
+    },
+    {
+      "id": "tn-holidays-2026",
+      "group": "holidays",
+      "name": "Government of Tamil Nadu – public holidays 2026",
+      "title": "Public Holidays under the Negotiable Instruments Act, 1881 for the State Government Offices and banks in Tamil Nadu, 2026",
+      "number": "G.O.(Ms.) No.708, Public (Miscellaneous) Department",
+      "date": "2025-11-11",
+      "url": "https://www.tn.gov.in/sites/default/holidays/public_e_708_2025.pdf",
+      "listingUrl": "https://www.tn.gov.in/holiday.php",
+      "usedFor": [
+        "holidaysState",
+        "holidaysBank"
+      ]
+    },
+    {
+      "id": "tn-poll-holiday-2026",
+      "group": "holidays",
+      "name": "Tamil Nadu Government Gazette – poll holiday 2026",
+      "title": "Public holiday on account of the poll, General Election to the Tamil Nadu Legislative Assembly 2026",
+      "number": "G.O.(Ms.) No.239, Public (Miscellaneous) Department",
+      "date": "2026-03-26",
+      "url": "https://www.stationeryprinting.tn.gov.in/extra_ordinary_lists.php?id=MjAyNg%3D%3D",
+      "listingUrl": "https://www.tn.gov.in/holiday.php",
+      "usedFor": [
+        "holidaysState"
+      ]
+    },
+    {
+      "id": "rbi-holidays-chennai",
+      "group": "holidays",
+      "name": "RBI – bank holidays, Chennai",
+      "title": "RBI holiday matrix: holidays under the Negotiable Instruments Act, Chennai regional office",
+      "url": "https://www.rbi.org.in/scripts/HolidayMatrixDisplay.aspx?regoff=Chennai",
+      "listingUrl": "https://www.rbi.org.in/Scripts/HolidayMatrixDisplay.aspx",
+      "usedFor": [
+        "holidaysBank"
+      ]
+    },
+    {
+      "id": "rbi-2000-notes",
+      "group": "rbi",
+      "name": "RBI – ₹2000 banknotes status",
+      "title": "Withdrawal of ₹2000 Denomination Banknotes – Status (press release)",
+      "number": "Press Release 2026-2027/190",
+      "date": "2026-05-01",
+      "url": "https://www.rbi.org.in/Scripts/BS_ViewCurrencyPressRelease.aspx?Id=62669",
+      "listingUrl": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+      "usedFor": [
+        "cashCounter"
+      ]
+    },
+    {
+      "id": "rbi-housing-finance",
+      "group": "rbi",
+      "name": "RBI – Master Circular, Housing Finance",
+      "title": "Master Circular – Housing Finance (loan-to-value limits for home loans)",
+      "number": "RBI/2025-26/16, DOR.CRE.REC.No.12/08.12.001/2025-26",
+      "date": "2025-04-01",
+      "url": "https://www.rbi.org.in/Scripts/BS_ViewMasCirculardetails.aspx?id=12824",
+      "listingUrl": "https://www.rbi.org.in/Scripts/BS_ViewMasterCirculars.aspx",
+      "usedFor": [
+        "homeLoan"
+      ]
+    },
+    {
+      "id": "imd-rashtriya-panchang",
+      "group": "calendar",
+      "name": "Positional Astronomy Centre (IMD) – Rashtriya Panchang",
+      "title": "Rashtriya Panchang (Indian national calendar and daily panchang; used to check the panchangam calculations)",
+      "url": "https://packolkata.imd.gov.in/rashtriya-panchang-english.php",
+      "listingUrl": "https://packolkata.imd.gov.in/",
+      "usedFor": [
+        "panchangam"
+      ]
+    }
+  ]
+}
