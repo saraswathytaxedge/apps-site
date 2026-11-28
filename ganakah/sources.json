@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "published": "2026-11-24",
   "items": [
     {
@@ -517,6 +517,31 @@
       ]
     },
     {
+      "id": "pfrda-exits-compiled",
+      "group": "savings",
+      "name": "PFRDA – NPS exit regulations (compiled)",
+      "title": "PFRDA (Exits and Withdrawals under the National Pension System) Regulations, 2015 – last amended on 20th July 2026",
+      "date": "2026-07-20",
+      "url": "https://www.pfrda.org.in/documents/33652/184762/PFRDA+Exits+and+Withdrawals+under+the+NPS+Regulations+2015+_Last+amended+on+20+July+2026_+%281%29.pdf",
+      "listingUrl": "https://pfrda.org.in/web/pfrda/regulatory-framework/regulations",
+      "usedFor": [
+        "nps"
+      ]
+    },
+    {
+      "id": "pib-nps-exit-2025",
+      "group": "savings",
+      "name": "PIB – NPS exit amendments",
+      "title": "Key amendments in PFRDA (Exits and Withdrawals under the NPS) Regulations, 2015",
+      "number": "PRID 2206763",
+      "date": "2025-12-19",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2206763",
+      "listingUrl": "https://www.pib.gov.in/allRel.aspx",
+      "usedFor": [
+        "nps"
+      ]
+    },
+    {
       "id": "gcc-pt",
       "group": "state",
       "name": "Greater Chennai Corporation – profession tax",
@@ -660,12 +685,12 @@
     {
       "id": "rbi-housing-finance",
       "group": "rbi",
-      "name": "RBI – Master Circular, Housing Finance",
-      "title": "Master Circular – Housing Finance (loan-to-value limits for home loans)",
-      "number": "RBI/2025-26/16, DOR.CRE.REC.No.12/08.12.001/2025-26",
-      "date": "2025-04-01",
-      "url": "https://www.rbi.org.in/Scripts/BS_ViewMasCirculardetails.aspx?id=12824",
-      "listingUrl": "https://www.rbi.org.in/Scripts/BS_ViewMasterCirculars.aspx",
+      "name": "RBI – Credit Facilities Directions (housing loans)",
+      "title": "Reserve Bank of India (Commercial Banks – Credit Facilities) Directions, 2025 (updated as on 01-10-2026), Chapter VIII B, paragraphs 111–113 (loan-to-value limits for home loans)",
+      "number": "RBI/DOR/2025-26/154, DOR.CRE.REC.73/07-01-001/2025-26",
+      "date": "2025-11-28",
+      "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13156",
+      "listingUrl": "https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx",
       "usedFor": [
         "homeLoan"
       ]
